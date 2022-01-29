@@ -12,32 +12,8 @@ public class UIObjectFX : MonoBehaviour {
 
     public enum EffectType {
         
-        // Combined rotational wiggle and scale pulse. Use to attract the eye to the next desired input.
-        AttentionShake,    
-        
-        // Instant white flash, then fade. Use to attract attention to lower-opacity objects.
-        WhiteFlash,
-        
-        // Size Pulse. Indicate that a button has been pressed.
-        ButtonClickSuccess,
-        
-        // Shake and rotation that simulates an "I can't do that" waggle. Indicate that an action can't be taken right now.
-        ButtonClickFailure,  
-        
-        // Shake, size pulse, and a small upward bounce. Used on a currency icon when the associated currency goes up.
-        CollectionBounce, 
-        
-        // Toggled downscaling and rotational wiggle. Used to indicate a card is interactable during Edit Mode.
-        EditModeWiggle,
-        
-        // Brief size pulse. Used on a club collection bar to indicate the club is upgradeable.
-        UpgradablePulse,
-        
-        // Upward Bounce, Size Pulse, and Wiggle. Used when a card transitions into another card on the inventory.
-        CardRefreshPulse,
-        
-        // Particle effect performed around a quest tile when it is claimable.
-        QuestClaimableParticles
+        // Scale Pulse to pull the eye.
+        AttentionPulse
         
     }
 
