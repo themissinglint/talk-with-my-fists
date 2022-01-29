@@ -5383,6 +5383,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Toast: {fileID: 11400000, guid: 5be8956b7ec8d184fa15ecabef19c876, type: 2}
   FXRoot: {fileID: 422658393}
+  IdleEffect: 2
+  IdleBounceTime: 2.5
+  IdleBounceAmp: -0.15
+  IdleBounceDir: {x: 0, y: 1}
+  IdleBounceSpeed: 0.4
+  PerkUpAmp: 0.5
+  PerkUpDir: {x: 0, y: 1}
+  PerkUpSpeed: 0.8
 --- !u!58 &1089661563
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6870,6 +6878,9 @@ MonoBehaviour:
       type: 3}
   - EffectType: 1
     Prefab: {fileID: 4950218402735044692, guid: 735cc4fc87561324786bac9e58f02449,
+      type: 3}
+  - EffectType: 2
+    Prefab: {fileID: 4950218402735044692, guid: e059a1bd327dcc3488601f0f45ca2f2b,
       type: 3}
 --- !u!1 &1404044319
 GameObject:
@@ -9620,6 +9631,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 451582, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11420014, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
+      propertyPath: EnableEffectsOnMobile
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

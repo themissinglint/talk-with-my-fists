@@ -16,7 +16,10 @@ public class UIObjectFX : MonoBehaviour {
         AttributeGainedPulse,
         
         // Squashy Bounce.
-        NPCPerkUpPulse
+        NPCPerkUpPulse,
+        
+        // Gentle Squash.
+        NPCIdle
         
     }
 
@@ -64,6 +67,12 @@ public class UIObjectFX : MonoBehaviour {
         if (!instance) return;
         SetTarget(effectType, targetObject, out UIObjectFXMappingInternal effect);
         effect.Controller.TriggerWithArgs(new FXArgs{Amplitude = amplitude, InputVector = Vector2.up});
+    }
+
+    public static void DoEffect(EffectType effectType, GameObject targetObject, FXArgs args) {
+        if (!instance) return;
+        SetTarget(effectType, targetObject, out UIObjectFXMappingInternal effect);
+        effect.Controller.TriggerWithArgs(args);
     }
 
     // TODO: Toggle.
