@@ -12,7 +12,7 @@ public class InteractionToastDisplay : MonoBehaviour {
         Instance = this;
     }
 
-    public void DoToast(InteractionToastData data) {
+    public void PopToast(InteractionToastData data) {
         BackgroundImage.color = data.BackgroundColor;
     }
 

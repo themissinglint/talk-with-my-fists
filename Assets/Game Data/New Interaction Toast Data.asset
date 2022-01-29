@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Test Interaction Toast
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionToast
+  m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
+  m_Name: New Interaction Toast Data
+  m_EditorClassIdentifier: 
+  BackgroundColor: {r: 1, g: 0, b: 0, a: 1}
