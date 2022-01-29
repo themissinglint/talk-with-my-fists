@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb3431e8adb3c64b9d7156a890b24c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionForce: 40
-  pickupSFX: {fileID: 8300000, guid: 5f46bea412811d44b8dd3ecd061f52a1, type: 3}
+  attractionForce: 30
+  pickupSFX: {fileID: 8300000, guid: 617f678d0ca691046a5d9f1d75e4de1f, type: 3}
