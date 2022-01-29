@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Plugins/Sirenix/Odin Inspector/Config/Resources.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset
+Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset.meta
