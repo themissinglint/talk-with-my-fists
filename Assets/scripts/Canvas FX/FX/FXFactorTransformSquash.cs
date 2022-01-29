@@ -8,17 +8,20 @@ public class FXFactorTransformSquash : FXFactorTransform {
     public float ValueMultiplier;
     
     public override bool IsExpired => Age >= ValueCurve.Duration();
-    
-    public override Vector2 GetSquashVector() {
+
+    public float GetCurrentValue() {
         float curveProduct = ValueCurve.Evaluate(Age);
         foreach (AnimationCurve curve in Args.Curves) {
             curveProduct *= curve.Evaluate(Age);
         }
-        float multiplierProduct = ValueMultiplier * Args.Amplitude;
+        return curveProduct * ValueMultiplier * Args.Amplitude;
+    }
+    
+    public override Vector2 GetSquashVector() {
         if (Args.InputVector != Vector2.zero) {
             Args.InputVector = Args.InputVector.normalized;
         }
-        return curveProduct * multiplierProduct * Args.InputVector;
+        return GetCurrentValue() * Args.InputVector;
     }
     
 }

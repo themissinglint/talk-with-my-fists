@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractionToastTestButton : MonoBehaviour {
 
     public InteractionToastData TestToastData;
+    public GameObject SourceObject;
 
     public void ReceiveClick() {
-        InteractionToastDisplay.Instance.PopToast(TestToastData);
+        InteractionToastDisplay.Instance.PopToast(TestToastData, SourceObject);
     }
 
 }
