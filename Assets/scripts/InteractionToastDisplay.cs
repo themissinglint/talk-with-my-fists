@@ -6,8 +6,10 @@ public class InteractionToastDisplay : MonoBehaviour {
     public static InteractionToastDisplay Instance;
     
     // Anatomy
-    public Image BackgroundImage;
     public RectTransform RT;
+    public Image BackgroundImage;
+    public Image EntityImage;
+    public RectTransform EntityRT;
     
     // Expansion
     public float ClosedSize;
@@ -37,6 +39,10 @@ public class InteractionToastDisplay : MonoBehaviour {
     private float _currentToastStartTime;
     private float CurrentToastAge => Time.time - _currentToastStartTime;
 
+    // Entity Scaling Fudge
+    private InteractionToastData.ToastScale _latestToastTargetScale = InteractionToastData.ToastScale.none;
+    private Vector2 _latestToastEntityOffsetVector;
+    
     private void Awake() {
         Instance = this;
     }
@@ -47,6 +53,10 @@ public class InteractionToastDisplay : MonoBehaviour {
 
     public void PopToast(InteractionToastData data) {
         BackgroundImage.color = data.BackgroundColor;
+        EntityImage.sprite = data.EntitySprite;
+        EntityRT.localScale = data.EntityScaleVector;
+        _latestToastTargetScale = data.Scale;
+        _latestToastEntityOffsetVector = data.EntityOffsetVector;
         _currentToast = data;
         _currentToastStartTime = Time.time;
 
@@ -59,17 +69,7 @@ public class InteractionToastDisplay : MonoBehaviour {
         _stateStartTime = Time.time;
         _targetScale = newScale;
         _scalePrev = _scaleCurrent;
-        switch (newScale) {
-            case InteractionToastData.ToastScale.none:
-                _scaleNext = ClosedSize;
-                break;
-            case InteractionToastData.ToastScale.small:
-                _scaleNext = SmallSize;
-                break;
-            case InteractionToastData.ToastScale.large:
-                _scaleNext = LargeSize;
-                break;
-        }
+        _scaleNext = PxFromScale(newScale);
     }
 
     private void Update() {
@@ -77,13 +77,27 @@ public class InteractionToastDisplay : MonoBehaviour {
         // Resize toward the appropriate toast size.
         _scaleCurrent = Mathf.SmoothDamp(_scaleCurrent, TargetScale, ref _scaleVelocity, TweenDampTime);
         RT.sizeDelta = new Vector2(_scaleCurrent, _scaleCurrent);
+        
+        EntityRT.anchoredPosition = _latestToastEntityOffsetVector * _scaleCurrent / PxFromScale(_latestToastTargetScale);
 
         if (_currentToast == null) return;
         if (CurrentToastAge > _currentToast.Time) {
             _currentToast = null;
             SetTargetScale(InteractionToastData.ToastScale.none);
         }
+    }
 
+    private float PxFromScale(InteractionToastData.ToastScale scale) {
+        switch (scale) {
+            case InteractionToastData.ToastScale.none:
+                return ClosedSize;
+            case InteractionToastData.ToastScale.small:
+                return SmallSize;
+            case InteractionToastData.ToastScale.large:
+                return LargeSize;
+        }
+
+        return ClosedSize;
     }
 
 }
