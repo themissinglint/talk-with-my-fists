@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast Test - Gardener
   m_EditorClassIdentifier: 
   BackgroundColor: {r: 0.092156865, g: 0.27450982, b: 0.031372547, a: 1}
-  EntitySprite: {fileID: 21300000, guid: 77fd72aebd460c8488026a7d0109031f, type: 3}
+  EntitySprite: {fileID: 21300000, guid: 52d609cd1cb381b4aa0cc196cc20f9f0, type: 3}
   EntityScaleVector: {x: 2.1, y: 2.1}
   EntityOffsetVector: {x: 10, y: 0}
   ExpiresFromTime: 0
