@@ -27,7 +27,8 @@ public class Tree : MonoBehaviour
 
 	void Land() {
 		Rigidbody2D rb;
-		for(int i=0; i < woodCount; i++) {
+		AudioSource.PlayClipAtPoint(landSFX, transform.position);
+		for (int i=0; i < woodCount; i++) {
 			rb = Instantiate(wood, transform.position + Vector3.up + transform.up * Random.Range(0f, 8f), Quaternion.AngleAxis(Random.Range(0, 360), Vector3.back)).GetComponent<Rigidbody2D>();
 			rb.AddForce(new Vector2(Random.Range(-explodeImpulse, explodeImpulse), Random.Range(-explodeImpulse, explodeImpulse)), ForceMode2D.Impulse);
 			rb.AddTorque(Random.Range(-1f, 1f));
@@ -48,6 +49,7 @@ public class Tree : MonoBehaviour
 			if(character.MovementState.CurrentState == CharacterStates.MovementStates.Dashing) {
 				Debug.Log("Tiiiiiimmber!");
 				Animation anim = GetComponent<Animation>();
+				AudioSource.PlayClipAtPoint(chopSFX, transform.position);
 				anim.Play();
 			}
 		}
