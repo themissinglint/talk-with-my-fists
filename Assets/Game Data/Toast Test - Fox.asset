@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Time: 2
   BackgroundColor: {r: 0, g: 0.05660379, b: 0.026079338, a: 1}
-  EntitySprite: {fileID: 21300000, guid: 220c473b80f6a2d4fab2380e0772cbfd, type: 3}
-  Scale: 1
+  EntitySprite: {fileID: 21300000, guid: 408555e1d91994148939714d2b123c61, type: 3}
+  EntityScaleVector: {x: -1.8, y: 1.8}
+  EntityOffsetVector: {x: 10, y: -70}
+  Scale: 2
