@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using MoreMountains.Tools;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
@@ -22,10 +23,12 @@ public class FXApplierTransform : MonoBehaviour {
       _baseScale = _transform.localScale;
       _basePosition = _transform.localPosition;
       _baseRotation = _transform.rotation;
+      int sibIndex = _transform.GetSiblingIndex();
       GameObject squashObject = Instantiate(new GameObject(), _transform.parent);
       squashObject.name = "Squash Transform";
       _squashInversionTransform = squashObject.transform;
       _transform.SetParent(_squashInversionTransform);
+      _squashInversionTransform.SetSiblingIndex(sibIndex);
    }
 
    public void AddFactor(FXFactorTransform newFactor) {
@@ -38,12 +41,16 @@ public class FXApplierTransform : MonoBehaviour {
       Vector2 offset = CalculateOffset();
       float rotation = CalculateRotation();
       Vector2 squashScale = CalculateSquash(out float squashRotation);
-      
-      _transform.localScale = new Vector2(_baseScale.x * scale.x * squashScale.x, _baseScale.y * scale.y * squashScale.y);
+
+      if (squashRotation > 0) {
+         Debug.Log("catch");
+      }
+      _transform.localScale = new Vector2(_baseScale.x * scale.x, _baseScale.y * scale.y);
+      _squashInversionTransform.localScale = new Vector2(squashScale.x, squashScale.y);
       _transform.localPosition = _basePosition + MathUtilities.RotateVector2(offset, squashRotation);
-      _transform.rotation = _baseRotation;
-      _squashInversionTransform.rotation = Quaternion.identity;
-      _transform.Rotate(0f, 0f, squashRotation + rotation);
+      _transform.localRotation = _baseRotation;
+      _squashInversionTransform.localRotation = Quaternion.identity;
+      _transform.Rotate(0f, 0f, squashRotation + rotation); 
       _squashInversionTransform.Rotate(0f, 0f, -squashRotation);
    }
 
@@ -77,7 +84,25 @@ public class FXApplierTransform : MonoBehaviour {
 
    private Vector2 CalculateSquash (out float squashRotation) {
       // Calculate Final Vector
-      List<Vector2> squashVectors = _factors.Select(e => e.GetSquashVector()).ToList();
+      // List<Vector2> squashVectors = _factors.Select(e => e.GetSquashVector()).ToList();
+
+      List<FXFactorTransformSquash> squashFactors = new List<FXFactorTransformSquash>();
+      foreach (FXFactorTransform factor in _factors) {
+         if (factor is FXFactorTransformSquash) {
+            squashFactors.Add((FXFactorTransformSquash) factor);
+         }
+      }
+
+      // A negative value means that it is stretched in that direction instead of squashed.
+      List<Vector2> squashVectors = new List<Vector2>();
+      foreach (FXFactorTransformSquash factor in squashFactors) { 
+         Vector2 vec = factor.GetSquashVector();
+         if (factor.GetCurrentValue() < 0) {
+            vec = MathUtilities.RotateVector2(vec, 90f);
+         }
+         squashVectors.Add(vec);
+      }
+      
       Vector2 sumVector = new Vector2(squashVectors.Sum(e => e.x), squashVectors.Sum(e => e.y));
       float mag = sumVector.magnitude;
       if (mag > magnitudeCap) {

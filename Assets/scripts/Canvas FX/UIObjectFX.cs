@@ -13,7 +13,10 @@ public class UIObjectFX : MonoBehaviour {
     public enum EffectType {
         
         // Scale Pulse to pull the eye.
-        AttentionPulse
+        AttributeGainedPulse,
+        
+        // Squashy Bounce.
+        NPCPerkUpPulse
         
     }
 
@@ -60,7 +63,7 @@ public class UIObjectFX : MonoBehaviour {
     public static void DoEffect(EffectType effectType, GameObject targetObject, float amplitude = 1f, float timeOffset = 0f) {
         if (!instance) return;
         SetTarget(effectType, targetObject, out UIObjectFXMappingInternal effect);
-        effect.Controller.TriggerWithArgs(new FXArgs{Amplitude = amplitude});
+        effect.Controller.TriggerWithArgs(new FXArgs{Amplitude = amplitude, InputVector = Vector2.up});
     }
 
     // TODO: Toggle.
