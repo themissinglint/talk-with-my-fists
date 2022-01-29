@@ -130,8 +130,8 @@ MonoBehaviour:
   wood: {fileID: 1507191475867922436, guid: fad2d7e8c0c6da64b9b3231d86487810, type: 3}
   acorn: {fileID: 3533502083710759679, guid: c75525814cd4fc14aba15a17e9fcebd5, type: 3}
   explodeImpulse: 30
-  chopSFX: {fileID: 8300000, guid: d6654b23983ce73439bcc32434698d3c, type: 3}
-  landSFX: {fileID: 8300000, guid: 5d8392fa242f07e44a816367d6b2c55b, type: 3}
+  chopSFX: {fileID: 8300000, guid: cc9bf1deb3fd7fc4c8b297893e056b1a, type: 3}
+  landSFX: {fileID: 8300000, guid: a0518c2d4272b8040bdc60c43dd7b67e, type: 3}
 --- !u!111 &2168601371468879296
 Animation:
   m_ObjectHideFlags: 0
