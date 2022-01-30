@@ -29,7 +29,7 @@ public class WalkingEnemy: MonoBehaviour
 		rb.AddForce(new Vector3(Mathf.Sign(patrolPoints[patrolPointIdx].x - transform.position.x), 0f, 0f) * speed);
 
 		if(Mathf.Abs(transform.position.x - patrolPoints[patrolPointIdx].x) < .4f) {
-			Debug.Log("Walker to next point, " + patrolPointIdx + " of " + patrolPoints.Length);
+			//Debug.Log("Walker to next point, " + patrolPointIdx + " of " + patrolPoints.Length);
 			patrolPointIdx = (patrolPointIdx + 1) % patrolPoints.Length;
 		}
 

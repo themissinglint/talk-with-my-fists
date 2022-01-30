@@ -29,7 +29,6 @@ public class Bee : MonoBehaviour
 		rb.AddForce((patrolPoints[patrolPointIdx] - transform.position).normalized * speed);
 
 		if((transform.position - patrolPoints[patrolPointIdx]).sqrMagnitude < .8f * .8f) {
-			Debug.Log("Bee to next point, " + patrolPointIdx + " of " + patrolPoints.Length);
 			patrolPointIdx = (patrolPointIdx + 1) % patrolPoints.Length;
 		}
 

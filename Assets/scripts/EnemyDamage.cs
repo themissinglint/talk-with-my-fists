@@ -8,6 +8,7 @@ public class EnemyDamage : MonoBehaviour {
 	public GameObject deathsplosion;
 	public int hp = 1;
 	public float myKnockback = 10f;
+	public bool hurtsPlayer = true;
 	private float lastHitTime = 0f;
 	private float iFrames = .2f;
 
@@ -22,7 +23,9 @@ public class EnemyDamage : MonoBehaviour {
 
 			Character plrChar = collision.gameObject.GetComponent<Character>();
 			if (plrChar.MovementState.CurrentState == CharacterStates.MovementStates.Dashing) {
+				Debug.Log("dashing player triggered.");
 				if(lastHitTime + iFrames > Time.time) {
+					Debug.Log("dashing player triggered but in iFrames.");
 					//in iFrames, return.
 					return;
 				}
@@ -32,6 +35,7 @@ public class EnemyDamage : MonoBehaviour {
 				Instantiate(deathsplosion, transform.position, Quaternion.identity);
 
 				if (hp <= 0) {
+					Debug.Log("dashing player triggered, hp now 0");
 					int killCount = PlayerStatus.GiveCreditForKilledEnemy(gameObject);
 					if (KillToast != null && InteractionToastDisplay.Instance != null) {
 						InteractionToastDisplay.Instance.PopToast(KillToast, gameObject, collectableNumber:killCount);
@@ -39,13 +43,14 @@ public class EnemyDamage : MonoBehaviour {
 					PlayerStatus.AddStat(StatChanged, StatChangeAmount);
 					Destroy(gameObject);
 				} else {
+					Debug.Log("dashing player triggered, HP is " + hp);
 					Vector3 knockbackVector = new Vector3(Mathf.Sign(transform.position.x - plrChar.transform.position.x), 0.1f, 0f);
-					GetComponent<Rigidbody2D>().AddForce(knockbackVector * myKnockback);
+					GetComponent<Rigidbody2D>().AddForce(knockbackVector * myKnockback, ForceMode2D.Impulse);
 					lastHitTime = Time.time;
 				}
 
-			} else {
-				// bee hurts player
+			} else if(hurtsPlayer){
+				// I hurt player
 				AudioSource.PlayClipAtPoint(attackSFX, transform.position);
 				plrChar.GetComponent<PlayerDamage>().TakeDamage(gameObject);
 			}
