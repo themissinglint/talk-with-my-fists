@@ -3,9 +3,7 @@ using UnityEngine.UI;
 
 public class TimeBar : MonoBehaviour {
 
-    public float TotalTime;
-    public float Progress => Mathf.Clamp01(Time.time / TotalTime);
-    public float PctLeft => 1f - Progress;
+    public float PctLeft => 1f - WorldStatus.GameTimeProgress;
 
     public RectTransform BarOutlineRT;
     public RectTransform BarRT;

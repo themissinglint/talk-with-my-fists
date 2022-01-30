@@ -50,7 +50,7 @@ MonoBehaviour:
   PickupToast: {fileID: 11400000, guid: 33f42c186dbdbf2458ea8ac964ae6baf, type: 2}
   pickupSFX: {fileID: 8300000, guid: 617f678d0ca691046a5d9f1d75e4de1f, type: 3}
   StatChanged: 1
-  StatChangeAmount: 0.01
+  StatChangeAmount: 0.005
 --- !u!212 &1920343700977360522
 SpriteRenderer:
   m_ObjectHideFlags: 0
