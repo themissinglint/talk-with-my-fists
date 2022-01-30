@@ -21,7 +21,7 @@ MonoBehaviour:
   ExpiresFromDistance: 1
   ExpirationDistance: 4.5
   HasDialogue: 1
-  DialogueText: Mind getting me <style=highlight>10 mushrooms</style>? My pet badger
+  DialogueText: Mind getting me <style=highlight>2 mushrooms</style>? My pet badger
     really likes them as treats.
   DialogueColor: {r: 1, g: 0.37626696, b: 0.2235294, a: 1}
   Scale: 2

@@ -38,6 +38,7 @@ Transform:
   - {fileID: 5326453567143724488}
   - {fileID: 531828832}
   - {fileID: 2061365021}
+  - {fileID: 7521430753655266157}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,6 +220,8 @@ MonoBehaviour:
   Volumes:
   - VolumeID: Default
     Ref: {fileID: 531828833}
+  - VolumeID: Shroomed
+    Ref: {fileID: 3438325476005769235}
 --- !u!1 &531828831
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,8 +961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NeutralSource: {fileID: 1617446953}
-  NeutralMax: 1
-  NeutralMin: 0.4
+  NeutralMax: 0.2
+  NeutralMin: 0.08
   DampingTime: 1.5
   Layers:
   - Source: {fileID: 967825288}
@@ -978,6 +981,55 @@ MonoBehaviour:
     Stat: 0
     ValueCurrent: 0
     ValueVelocity: 0
+--- !u!1 &3315347901073806179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7521430753655266157}
+  - component: {fileID: 3438325476005769235}
+  m_Layer: 0
+  m_Name: PP Shroomed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7521430753655266157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315347901073806179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 451582}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3438325476005769235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315347901073806179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 20211471ab734c640a90b26305753982, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 0
+  priority: 0
 --- !u!1001 &835402245
 PrefabInstance:
   m_ObjectHideFlags: 0

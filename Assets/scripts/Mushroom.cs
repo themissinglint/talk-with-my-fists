@@ -8,6 +8,10 @@ public class Mushroom : Collectable {
     
     protected override void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.layer == 9) { // 9 is player
+            
+            if (GetComponent<FXController>() != null) {
+                GetComponent<FXController>().Trigger();
+            }
             Debug.Log("You get a Mushroom!");
             PlayerStatus.MushroomCount++;
         }
