@@ -33,7 +33,7 @@ public class PlayerStatDisplay : MonoBehaviour {
     }
 
     public void SetNewStatValue(PlayerStat stat, float newValue) {
-        StatWedge wedge = Wedges.First(e => e.Stat == TestIncreasedStat);
+        StatWedge wedge = Wedges.First(e => e.Stat == stat);
         wedge.CurProgress = Mathf.Clamp01(newValue);
         UIObjectFX.DoEffect(UIObjectFX.EffectType.AttributeGainedPulse, wedge.GameObject, PulseMagnitude);
     }

@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickupToast: {fileID: 11400000, guid: 2eccb0b063ec94f498e00623d76f4012, type: 2}
   pickupSFX: {fileID: 8300000, guid: 7ea1224718dfa9948bc2e20932fd0212, type: 3}
+  StatChanged: 0
+  StatChangeAmount: 0.033
 --- !u!212 &1920343700977360522
 SpriteRenderer:
   m_ObjectHideFlags: 0

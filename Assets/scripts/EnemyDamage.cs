@@ -9,6 +9,10 @@ public class EnemyDamage : MonoBehaviour {
 
 	public InteractionToastData KillToast;
 	
+	[Header("Stat Change On Kill")]
+	public PlayerStat StatChanged;
+	public float StatChangeAmount;
+	
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.gameObject.layer == 9) { // 9 is player
 
@@ -21,6 +25,7 @@ public class EnemyDamage : MonoBehaviour {
 				if (KillToast != null && InteractionToastDisplay.Instance != null) {
 					InteractionToastDisplay.Instance.PopToast(KillToast, gameObject, collectableNumber:killCount);
 				}
+				PlayerStatus.AddStat(StatChanged, StatChangeAmount);
 				Destroy(gameObject);
 
 			} else {

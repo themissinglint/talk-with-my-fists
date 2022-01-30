@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickupToast: {fileID: 11400000, guid: 33f42c186dbdbf2458ea8ac964ae6baf, type: 2}
   pickupSFX: {fileID: 8300000, guid: 617f678d0ca691046a5d9f1d75e4de1f, type: 3}
+  StatChanged: 1
+  StatChangeAmount: 0.01
 --- !u!212 &1920343700977360522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,7 +91,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6d8e91dd3aa0b364faca0241863c590c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

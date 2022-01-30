@@ -7,6 +7,10 @@ public class Collectable : MonoBehaviour {
     public InteractionToastData PickupToast;
     public AudioClip pickupSFX;
 
+    [Header("Stat Change")]
+    public PlayerStat StatChanged;
+    public float StatChangeAmount;
+
     protected virtual int CollectableCount => 0;
     
     protected Rigidbody2D rb;
@@ -29,6 +33,7 @@ public class Collectable : MonoBehaviour {
             if (InteractionToastDisplay.Instance != null) {
                 InteractionToastDisplay.Instance.PopToast(PickupToast, gameObject, collectableNumber: CollectableCount);
             }
+            PlayerStatus.AddStat(StatChanged, StatChangeAmount);
             Destroy(gameObject);
         }
     }
