@@ -1299,11 +1299,7 @@ Transform:
   - {fileID: 8712786277992115509}
   - {fileID: 4362110185378971596}
   - {fileID: 6530293119997761953}
-<<<<<<< HEAD
   - {fileID: 9074910278273870176}
-=======
-  - {fileID: 7700717180153405723}
->>>>>>> efbc050ad6de8591319a09b0716a9c9f7adf8be4
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
