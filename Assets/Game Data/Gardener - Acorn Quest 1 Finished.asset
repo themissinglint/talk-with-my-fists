@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
-  m_Name: Gardener - Acorn Quest Finished
+  m_Name: Gardener - Acorn Quest 1 Finished
   m_EditorClassIdentifier: 
   BackgroundColor: {r: 0.092156865, g: 0.27450982, b: 0.031372547, a: 1}
   EntitySprite: {fileID: 21300000, guid: 52d609cd1cb381b4aa0cc196cc20f9f0, type: 3}

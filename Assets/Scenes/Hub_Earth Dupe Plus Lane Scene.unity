@@ -532,8 +532,13 @@ MonoBehaviour:
   PerkUpDir: {x: 0, y: 1}
   PerkUpSpeed: 0.8
   TalkClip: {fileID: 8300000, guid: 4f452211f355f94439afccc7d09b4d43, type: 3}
-  AcornQuestGiving: {fileID: 11400000, guid: 2b2e3597944ce74498fecb51231e9ad2, type: 2}
-  AcornQuestCompletion: {fileID: 11400000, guid: 5be8956b7ec8d184fa15ecabef19c876,
+  AcornFirstQuestGiving: {fileID: 11400000, guid: 2b2e3597944ce74498fecb51231e9ad2,
+    type: 2}
+  AcornFirstQuestCompletion: {fileID: 11400000, guid: 5be8956b7ec8d184fa15ecabef19c876,
+    type: 2}
+  AcornSecondQuestGiving: {fileID: 11400000, guid: ee8f2cf817e9eda45b392b972433d272,
+    type: 2}
+  AcornSecondQuestCompletion: {fileID: 11400000, guid: 3d9917a84283ddd4e9fc6c7a0976a884,
     type: 2}
   BeeWarning: {fileID: 11400000, guid: 571df26a807620c46a3950f06eff271c, type: 2}
   BeeFirstQuestCompleted: {fileID: 11400000, guid: c3b4a4404f8dd654ab3929891fa1368b,
