@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class NPCControllerTrader : NPCController {
@@ -23,12 +24,11 @@ public class NPCControllerTrader : NPCController {
         if (!PlayerStatus.HasCompletedTraderWoodQuest && PlayerStatus.WoodCount >= 10) {
             InteractionToastDisplay.Instance.PopToast(WoodQuestCompletion, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
-            PlayerStatus.WoodCount -= 10;
-            PlayerStatus.HasCompletedTraderWoodQuest = true;
+            CompleteWoodQuest();
             return;
         }
 
-        // Warn the player about killing bees.
+        // The player just destroyed a ladder. What a jerk!
         if (!PlayerStatus.HasCompletedTraderLadderQuest && PlayerStatus.HasDestroyedTraderLadder) {
             InteractionToastDisplay.Instance.PopToast(LadderDestructionCompletion, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
@@ -37,6 +37,16 @@ public class NPCControllerTrader : NPCController {
         InteractionToastDisplay.Instance.PopToast(FinalDialogue, gameObject);
         UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
         
+    }
+
+    private void CompleteWoodQuest() {
+        PlayerStatus.WoodCount -= 10;
+        PlayerStatus.HasCompletedTraderWoodQuest = true;
+        PlayerInstance.Instance.GetComponent<CharacterDash>().DashDistance += 2f;
+        PlayerStatus.AddStat(PlayerStat.Exploration, 0.21f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Achievement, -.07f), 0.6f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Violence, -.07f), 1.2f);
+        ThreadingUtil.Instance.RunLater(() => UnlockableDisplay.Instance.DoUnlockDisplay("Long Dash"), 1.5f);
     }
     
 }
