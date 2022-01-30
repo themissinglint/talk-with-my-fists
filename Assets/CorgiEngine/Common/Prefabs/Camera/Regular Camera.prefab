@@ -961,8 +961,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NeutralSource: {fileID: 1617446953}
-  NeutralMax: 1
-  NeutralMin: 0.4
+  NeutralMax: 0.2
+  NeutralMin: 0.08
   DampingTime: 1.5
   Layers:
   - Source: {fileID: 967825288}
