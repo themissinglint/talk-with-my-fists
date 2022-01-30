@@ -29,6 +29,8 @@ public static class PlayerStatus {
     public static bool HasDestroyedTraderLadder;
     public static bool HasCompletedTraderLadderQuest;
     
+    // Player Damage
+    public static float DamageDealtByDash = 1f;
 
     public static Dictionary<PlayerStat, float> StatValues = new Dictionary<PlayerStat, float> {
         {PlayerStat.Achievement, 0f},
