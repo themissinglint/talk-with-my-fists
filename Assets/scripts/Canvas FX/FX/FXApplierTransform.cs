@@ -21,13 +21,15 @@ public class FXApplierTransform : MonoBehaviour {
    private void Awake() {
       _transform = transform;
       _baseScale = _transform.localScale;
-      _basePosition = _transform.localPosition;
-      _baseRotation = _transform.rotation;
+      _basePosition = Vector2.zero;
+      _baseRotation = _transform.localRotation;
       int sibIndex = _transform.GetSiblingIndex();
-      GameObject squashObject = Instantiate(new GameObject(), _transform.parent);
+      GameObject squashObject = Instantiate(new GameObject(), _transform.position, _transform.rotation, _transform.parent);
       squashObject.name = "Squash Transform";
       _squashInversionTransform = squashObject.transform;
       _transform.SetParent(_squashInversionTransform);
+      _transform.position = _squashInversionTransform.position;
+      _transform.rotation = _squashInversionTransform.rotation;
       _squashInversionTransform.SetSiblingIndex(sibIndex);
    }
 
