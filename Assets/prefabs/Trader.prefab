@@ -155,6 +155,7 @@ MonoBehaviour:
   PerkUpAmp: 0.5
   PerkUpDir: {x: 0, y: 1}
   PerkUpSpeed: 1
+  TalkClip: {fileID: 8300000, guid: 197249f366a51c2429199f2e9fdbb397, type: 3}
   WoodQuestStart: {fileID: 11400000, guid: b681ed12e23a10f419c36d828a95c462, type: 2}
   WoodQuestCompletion: {fileID: 11400000, guid: f36cc8cfbd850404bbb85943ffda1fb2,
     type: 2}

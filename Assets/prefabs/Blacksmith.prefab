@@ -71,7 +71,7 @@ MonoBehaviour:
   PerkUpAmp: 0.4
   PerkUpDir: {x: 0, y: 1}
   PerkUpSpeed: 0.9
-  TalkClip: {fileID: 0}
+  TalkClip: {fileID: 8300000, guid: dfc579329a563d741852be00b48659e0, type: 3}
   DinosaurKillQuestCompletion: {fileID: 11400000, guid: 6cd37f4b2039a564f8d7ba56cd5f4431,
     type: 2}
   MushroomQuestFirstStart: {fileID: 11400000, guid: 2906f940b9c2b19428fce705438546fc,

@@ -531,7 +531,7 @@ MonoBehaviour:
   PerkUpAmp: 0.5
   PerkUpDir: {x: 0, y: 1}
   PerkUpSpeed: 0.8
-  TalkClip: {fileID: 0}
+  TalkClip: {fileID: 8300000, guid: 4f452211f355f94439afccc7d09b4d43, type: 3}
   AcornQuestGiving: {fileID: 11400000, guid: 2b2e3597944ce74498fecb51231e9ad2, type: 2}
   AcornQuestCompletion: {fileID: 11400000, guid: 5be8956b7ec8d184fa15ecabef19c876,
     type: 2}
@@ -4196,29 +4196,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
-        type: 3}
-      propertyPath: MushroomQuestFirstStart
-      value: 
-      objectReference: {fileID: 11400000, guid: 2906f940b9c2b19428fce705438546fc,
-        type: 2}
-    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
-        type: 3}
-      propertyPath: MushroomQuestSecondStart
-      value: 
-      objectReference: {fileID: 11400000, guid: d33750602d02ec34c986f8854fe50bc3,
-        type: 2}
-    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
-        type: 3}
-      propertyPath: MushroomQuestFirstCompletion
-      value: 
-      objectReference: {fileID: 11400000, guid: a385819206fc7ed4d9220c166882716b,
-        type: 2}
-    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
-        type: 3}
-      propertyPath: MushroomQuestSecondCompletion
-      value: 
-      objectReference: {fileID: 11400000, guid: 524532ef95ca34b4fa4c942d380944e7,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ad67f8cf5701949a47d81f34a18dd9, type: 3}
