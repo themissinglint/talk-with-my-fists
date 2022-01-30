@@ -17,6 +17,8 @@ public class NPCController : MonoBehaviour {
     public Vector2 PerkUpDir;
     public float PerkUpSpeed;
 
+    public AudioClip TalkClip;
+
     private void FirstUpdate() {
         _firstUpdate = false;
         UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, 0.1f);
@@ -33,6 +35,7 @@ public class NPCController : MonoBehaviour {
     
     public void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
+            AudioSource.PlayClipAtPoint(TalkClip, transform.position, 1f);
             InteractWithPlayer();
         }
     }

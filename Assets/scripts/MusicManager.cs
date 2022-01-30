@@ -26,7 +26,7 @@ public class MusicManager : MonoBehaviour {
         NeutralSource.volume = _neutralValueCurrent;
 
         foreach (MusicLayer layer in Layers) {
-            float targetValue = PlayerStatus.StatValues[layer.Stat];
+            float targetValue = Mathf.Floor(PlayerStatus.StatValues[layer.Stat] * 4) / 12f; // Step up through four volume levels.
             layer.ValueCurrent = Mathf.SmoothDamp(layer.ValueCurrent, targetValue, ref layer.ValueVelocity, DampingTime);
             layer.Source.volume = layer.ValueCurrent;
         }
