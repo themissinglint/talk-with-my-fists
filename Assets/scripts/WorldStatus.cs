@@ -5,6 +5,6 @@ using UnityEngine;
 public static class WorldStatus {
 
     public const float GameDuration = 240f;
-    public static float GameTimeProgress => Time.time / GameDuration;
+    public static float GameTimeProgress => Mathf.Clamp01(Time.time / GameDuration);
 
 }
