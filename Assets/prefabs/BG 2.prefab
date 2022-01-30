@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: d7f570d928388c94e924a5ceb166dfdb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.49851653, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: d7f570d928388c94e924a5ceb166dfdb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.49851653, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 5326453565648749841}
   - component: {fileID: 5326453565648749840}
   m_Layer: 0
-  m_Name: Day Sky
+  m_Name: Day Sky Far Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: -1620175883
   m_SortingLayer: -1
   m_SortingOrder: -400
-  m_Sprite: {fileID: 21300000, guid: 4964e43c1cc92fc49af320b960e18742, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c94c7803f81371b45b0d50e68f277a62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -326,7 +326,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: d7f570d928388c94e924a5ceb166dfdb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.49851653, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -410,7 +410,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: d7f570d928388c94e924a5ceb166dfdb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.49851653, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -494,7 +494,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -200
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.38692594, g: 0.4004788, b: 0.4433962, a: 1}
+  m_Color: {r: 0.031728376, g: 0.12401764, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -578,7 +578,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -200
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.38692594, g: 0.4004788, b: 0.4433962, a: 1}
+  m_Color: {r: 0.031728376, g: 0.12401764, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -698,7 +698,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -300
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.5277234, g: 0.5538114, b: 0.6320754, a: 1}
+  m_Color: {r: 0.0504628, g: 0.16413857, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -782,7 +782,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -300
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.5277234, g: 0.5538114, b: 0.6320754, a: 1}
+  m_Color: {r: 0.0504628, g: 0.16413857, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -866,7 +866,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -300
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.5277234, g: 0.5538114, b: 0.6320754, a: 1}
+  m_Color: {r: 0.0504628, g: 0.16413857, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -971,7 +971,7 @@ GameObject:
   - component: {fileID: 5326453566396665135}
   - component: {fileID: 5326453566396665134}
   m_Layer: 0
-  m_Name: Day Foreground (2)
+  m_Name: Day Sky Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,7 +1154,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -200
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.38692594, g: 0.4004788, b: 0.4433962, a: 1}
+  m_Color: {r: 0.031728376, g: 0.12401764, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1238,7 +1238,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: d7f570d928388c94e924a5ceb166dfdb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.49851653, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1322,7 +1322,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -200
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.38692594, g: 0.4004788, b: 0.4433962, a: 1}
+  m_Color: {r: 0.031728376, g: 0.12401764, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 5326453566570215992}
   - component: {fileID: 5326453566570215999}
   m_Layer: 0
-  m_Name: Day Foreground
+  m_Name: Day Sky Fore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1526,7 +1526,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -200
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.38692594, g: 0.4004788, b: 0.4433962, a: 1}
+  m_Color: {r: 0.031728376, g: 0.12401764, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1547,7 +1547,7 @@ GameObject:
   - component: {fileID: 5326453566763115873}
   - component: {fileID: 5326453566763115872}
   m_Layer: 0
-  m_Name: Day Foreground (1)
+  m_Name: Day Sky Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1644,7 +1644,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5326453566905122766}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.38002777, y: 2.5518436, z: 10}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1671,10 +1671,228 @@ MonoBehaviour:
   BackgroundLayers:
   - Layer: {fileID: 5326453567139845590}
     MotionMultiplier: 0.1
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.22352941, g: 0.49803922, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
   - Layer: {fileID: 5326453566317812928}
     MotionMultiplier: 0.04
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.03137255, g: 0.1254902, b: 0.29411766, a: 1}
+      key1: {r: 0.32941177, g: 0.5058824, b: 0.6313726, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
   - Layer: {fileID: 5326453566634308927}
     MotionMultiplier: 0.015
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.043137256, g: 0.13725491, b: 0.32941177, a: 1}
+      key1: {r: 0.5294118, g: 0.5529412, b: 0.6313726, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - Layer: {fileID: 5326453566396665135}
+    MotionMultiplier: 0
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.2058952, g: 0.19223924, b: 0.3018868, a: 0}
+      key1: {r: 1, g: 1, b: 1, a: 0.69411767}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 3392
+      ctime1: 65535
+      ctime2: 65535
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65478
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - Layer: {fileID: 5326453566763115873}
+    MotionMultiplier: 0
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.2058952, g: 0.19223924, b: 0.3018868, a: 0}
+      key1: {r: 1, g: 1, b: 1, a: 0.3529412}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 3392
+      ctime1: 65535
+      ctime2: 65535
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65478
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - Layer: {fileID: 5326453566570215992}
+    MotionMultiplier: 0
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.2058952, g: 0.19223924, b: 0.3018868, a: 0}
+      key1: {r: 1, g: 1, b: 1, a: 0.13333334}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 3392
+      ctime1: 65535
+      ctime2: 65535
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - Layer: {fileID: 5326453565648749841}
+    MotionMultiplier: 0
+    SpriteRenderers: []
+    DayNightGradient:
+      serializedVersion: 2
+      key0: {r: 0.2058952, g: 0.19223924, b: 0.3018868, a: 0}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 3392
+      ctime1: 65535
+      ctime2: 65535
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
 --- !u!1 &5326453567007871887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +1967,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -300
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.5277234, g: 0.5538114, b: 0.6320754, a: 1}
+  m_Color: {r: 0.0504628, g: 0.16413857, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1870,7 +2088,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -300
   m_Sprite: {fileID: 21300000, guid: 57fe7b63079f1e14aaf0952dcbe14bd3, type: 3}
-  m_Color: {r: 0.5277234, g: 0.5538114, b: 0.6320754, a: 1}
+  m_Color: {r: 0.0504628, g: 0.16413857, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -1954,7 +2172,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: -100
   m_Sprite: {fileID: 21300000, guid: d7f570d928388c94e924a5ceb166dfdb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.49851653, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
