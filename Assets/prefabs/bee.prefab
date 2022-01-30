@@ -142,6 +142,9 @@ MonoBehaviour:
   deathSFX: {fileID: 8300000, guid: 3033ff732db599547a65560a6d300800, type: 3}
   deathsplosion: {fileID: 2914147512315183598, guid: 6464563c948f28f45b61d5d4fdebb9cb,
     type: 3}
+  hp: 1
+  myKnockback: 10
+  hurtsPlayer: 1
   KillToast: {fileID: 11400000, guid: 69ea16ed8f8f03c41a3d369fbc18759f, type: 2}
   StatChanged: 3
   StatChangeAmount: 0.0667
@@ -157,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14fd89cfc5a90849bd8c340530f5c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 5
 --- !u!1 &7701063882108432058
 GameObject:
   m_ObjectHideFlags: 0
