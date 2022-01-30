@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 8121842}
   - component: {fileID: 11420014}
   - component: {fileID: 11482610}
-  - component: {fileID: 1132798762}
   - component: {fileID: 1132798763}
+  - component: {fileID: 1132798762}
   m_Layer: 0
   m_Name: Regular Camera
   m_TagString: MainCamera
@@ -143,21 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveParallax: 1
---- !u!114 &1132798762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131244}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a00269bb83cd641ac25c1584dc8196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Volumes:
-  - VolumeID: 
-    Ref: {fileID: 0}
 --- !u!114 &1132798763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +203,21 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1132798762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a00269bb83cd641ac25c1584dc8196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Volumes:
+  - VolumeID: 
+    Ref: {fileID: 0}
 --- !u!1 &531828831
 GameObject:
   m_ObjectHideFlags: 0
