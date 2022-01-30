@@ -10,6 +10,7 @@ public static class PlayerStatus {
     // Mushroom Quest
     public static int MushroomCount;
     public static bool HasCompletedBlacksmithMushroomQuest;
+    public static bool HasCompletedSecondBlacksmithMushroomQuest;
     
     // Wood Quest
     public static int WoodCount;

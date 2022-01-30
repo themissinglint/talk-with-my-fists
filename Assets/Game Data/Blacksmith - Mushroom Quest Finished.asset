@@ -22,6 +22,6 @@ MonoBehaviour:
   ExpirationDistance: 4.5
   HasDialogue: 1
   DialogueText: Preciate' ya! As a reward, here are some <style=highlight>less comfortable
-    pants</style> so you won't loaf around as much (20% faster move speed).
+    pants</style> so you won't loaf around as much.
   DialogueColor: {r: 1, g: 0.37626696, b: 0.2235294, a: 1}
   Scale: 2

@@ -7,14 +7,17 @@ public class NPCControllerBlacksmith : NPCController {
 
     [Header("Dialogue")]
     public InteractionToastData DinosaurKillQuestCompletion;
-    public InteractionToastData MushroomQuestStart;
-    public InteractionToastData MushroomQuestCompletion;
+    public InteractionToastData MushroomQuestFirstStart;
+    public InteractionToastData MushroomQuestFirstCompletion;
+    public InteractionToastData MushroomQuestSecondStart;
+    public InteractionToastData MushroomQuestSecondCompletion;
     public InteractionToastData BeeQuestStart;
     public InteractionToastData BeeQuestCompletion;
     public InteractionToastData DinosaurKillQuestHint;
     public InteractionToastData FinalDialogue;
 
-    private const int MushroomsReq = 10;
+    private const int MushroomsReqFirst = 2;
+    private const int MushroomsReqSecond = 5;
     private const int BeesReq = 10;
     
     protected override void InteractWithPlayer() {
@@ -27,17 +30,32 @@ public class NPCControllerBlacksmith : NPCController {
         }
 
         // Let the player know this character wants mushrooms!
-        if (!PlayerStatus.HasCompletedBlacksmithMushroomQuest && PlayerStatus.MushroomCount < MushroomsReq) {
-            InteractionToastDisplay.Instance.PopToast(MushroomQuestStart, gameObject);
+        if (!PlayerStatus.HasCompletedBlacksmithMushroomQuest && PlayerStatus.MushroomCount < MushroomsReqFirst) {
+            InteractionToastDisplay.Instance.PopToast(MushroomQuestFirstStart, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
             return;
         }
         
         // Complete the mushroom quest.
-        if (!PlayerStatus.HasCompletedBlacksmithMushroomQuest && PlayerStatus.MushroomCount >= MushroomsReq) {
-            InteractionToastDisplay.Instance.PopToast(MushroomQuestCompletion, gameObject);
+        if (!PlayerStatus.HasCompletedBlacksmithMushroomQuest && PlayerStatus.MushroomCount >= MushroomsReqFirst) {
+            InteractionToastDisplay.Instance.PopToast(MushroomQuestFirstCompletion, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
-            CompleteMushroomQuest();
+            CompleteFirstMushroomQuest();
+            return;
+        }
+        
+        // Let the player know this character wants MORE mushrooms!
+        if (!PlayerStatus.HasCompletedSecondBlacksmithMushroomQuest && PlayerStatus.MushroomCount < MushroomsReqSecond) {
+            InteractionToastDisplay.Instance.PopToast(MushroomQuestFirstStart, gameObject);
+            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            return;
+        }
+        
+        // Complete the second mushroom quest.
+        if (!PlayerStatus.HasCompletedSecondBlacksmithMushroomQuest && PlayerStatus.MushroomCount >= MushroomsReqSecond) {
+            InteractionToastDisplay.Instance.PopToast(MushroomQuestSecondCompletion, gameObject);
+            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            CompleteSecondMushroomQuest();
             return;
         }
 
@@ -52,6 +70,7 @@ public class NPCControllerBlacksmith : NPCController {
         if (!PlayerStatus.HasCompletedBlacksmithBeeQuest && PlayerStatus.BeeKillCount >= BeesReq) {
             InteractionToastDisplay.Instance.PopToast(BeeQuestCompletion, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            CompleteBeeQuest();
             return;
         }
 
@@ -68,15 +87,26 @@ public class NPCControllerBlacksmith : NPCController {
         
     }
     
-    private void CompleteMushroomQuest () {
-        PlayerStatus.MushroomCount -= MushroomsReq;
+    private void CompleteFirstMushroomQuest () {
+        PlayerStatus.MushroomCount -= MushroomsReqFirst;
         PlayerStatus.HasCompletedBlacksmithMushroomQuest = true;
-        PlayerInstance.Instance.GetComponent<CharacterHorizontalMovement>().MovementSpeed += 2f;
+        PlayerInstance.Instance.GetComponent<CharacterHorizontalMovement>().MovementSpeed += 1.5f;
         PlayerStatus.AddStat(PlayerStat.Achievement, 0.21f);
         ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Violence, -0.07f), 0.6f);
         ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Exploration, -0.07f), 1.2f);
         ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Social, 0.14f), 1.8f);
-        ThreadingUtil.Instance.RunLater(() => UnlockableDisplay.Instance.DoUnlockDisplay("Fast Movement"), 1.5f);
+        ThreadingUtil.Instance.RunLater(() => UnlockableDisplay.Instance.DoUnlockDisplay("Faster Movement"), 1.5f);
+    }
+    
+    private void CompleteSecondMushroomQuest () {
+        PlayerStatus.MushroomCount -= MushroomsReqSecond;
+        PlayerStatus.HasCompletedSecondBlacksmithMushroomQuest = true;
+        PlayerInstance.Instance.GetComponent<CharacterHorizontalMovement>().MovementSpeed += 1.5f;
+        PlayerStatus.AddStat(PlayerStat.Achievement, 0.21f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Violence, -0.07f), 0.6f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Exploration, -0.07f), 1.2f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Social, 0.14f), 1.8f);
+        ThreadingUtil.Instance.RunLater(() => UnlockableDisplay.Instance.DoUnlockDisplay("Fastest Movement"), 1.5f);
     }
     
     private void CompleteBeeQuest () {

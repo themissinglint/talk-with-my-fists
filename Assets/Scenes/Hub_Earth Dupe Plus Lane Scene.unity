@@ -549,26 +549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 147418011183701744, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -25.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 147418011183701744, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -21.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632530726321130265, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632530726321130265, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3632530727008862840, guid: ebeb0695453ab5d41aaa1b8655736259,
         type: 3}
       propertyPath: m_RootOrder
@@ -628,26 +608,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Levelskyline
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632530727767779971, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 46.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632530727767779971, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -77.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365155130252980303, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -27.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 6365155130252980303, guid: ebeb0695453ab5d41aaa1b8655736259,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -22.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebeb0695453ab5d41aaa1b8655736259, type: 3}
@@ -4236,5 +4196,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
+        type: 3}
+      propertyPath: MushroomQuestFirstStart
+      value: 
+      objectReference: {fileID: 11400000, guid: 2906f940b9c2b19428fce705438546fc,
+        type: 2}
+    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
+        type: 3}
+      propertyPath: MushroomQuestSecondStart
+      value: 
+      objectReference: {fileID: 11400000, guid: d33750602d02ec34c986f8854fe50bc3,
+        type: 2}
+    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
+        type: 3}
+      propertyPath: MushroomQuestFirstCompletion
+      value: 
+      objectReference: {fileID: 11400000, guid: a385819206fc7ed4d9220c166882716b,
+        type: 2}
+    - target: {fileID: 1060539317811839059, guid: e1ad67f8cf5701949a47d81f34a18dd9,
+        type: 3}
+      propertyPath: MushroomQuestSecondCompletion
+      value: 
+      objectReference: {fileID: 11400000, guid: 524532ef95ca34b4fa4c942d380944e7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ad67f8cf5701949a47d81f34a18dd9, type: 3}

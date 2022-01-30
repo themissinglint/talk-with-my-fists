@@ -71,10 +71,16 @@ MonoBehaviour:
   PerkUpAmp: 0.4
   PerkUpDir: {x: 0, y: 1}
   PerkUpSpeed: 0.9
+  TalkClip: {fileID: 0}
   DinosaurKillQuestCompletion: {fileID: 11400000, guid: 6cd37f4b2039a564f8d7ba56cd5f4431,
     type: 2}
-  MushroomQuestStart: {fileID: 11400000, guid: 2906f940b9c2b19428fce705438546fc, type: 2}
-  MushroomQuestCompletion: {fileID: 11400000, guid: a385819206fc7ed4d9220c166882716b,
+  MushroomQuestFirstStart: {fileID: 11400000, guid: 2906f940b9c2b19428fce705438546fc,
+    type: 2}
+  MushroomQuestFirstCompletion: {fileID: 11400000, guid: a385819206fc7ed4d9220c166882716b,
+    type: 2}
+  MushroomQuestSecondStart: {fileID: 11400000, guid: d33750602d02ec34c986f8854fe50bc3,
+    type: 2}
+  MushroomQuestSecondCompletion: {fileID: 11400000, guid: 524532ef95ca34b4fa4c942d380944e7,
     type: 2}
   BeeQuestStart: {fileID: 11400000, guid: fe09bcd2039330a449658ec4d21bdafe, type: 2}
   BeeQuestCompletion: {fileID: 11400000, guid: 3aca7f00c04e4a344b68e518172b7109, type: 2}
