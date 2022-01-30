@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
+  m_Name: Trader - Final Dialogue
+  m_EditorClassIdentifier: 
+  BackgroundColor: {r: 0.27450982, g: 0.27233848, b: 0.031372547, a: 1}
+  EntitySprite: {fileID: 21300000, guid: 59b759f4ad5d1fb47a3cba523524a66b, type: 3}
+  EntityScaleVector: {x: 2.1, y: 2.1}
+  EntityOffsetVector: {x: 8, y: -45}
+  ExpiresFromTime: 0
+  ExpirationTime: 0
+  ExpiresFromDistance: 1
+  ExpirationDistance: 4.5
+  HasDialogue: 1
+  DialogueText: Good luck, kid.
+  DialogueColor: {r: 0.9555477, g: 1, b: 0.2235294, a: 1}
+  Scale: 2

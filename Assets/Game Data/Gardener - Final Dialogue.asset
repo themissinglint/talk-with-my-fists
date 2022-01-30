@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
-  m_Name: Gardener - Get Me Acorns Complete
+  m_Name: Gardener - Final Dialogue
   m_EditorClassIdentifier: 
   BackgroundColor: {r: 0.092156865, g: 0.27450982, b: 0.031372547, a: 1}
   EntitySprite: {fileID: 21300000, guid: 52d609cd1cb381b4aa0cc196cc20f9f0, type: 3}
@@ -21,7 +21,6 @@ MonoBehaviour:
   ExpiresFromDistance: 1
   ExpirationDistance: 4.5
   HasDialogue: 1
-  DialogueText: Oh yes! YES! These <style=highlight>acorns</style> are exactly what
-    I've been looking for. Here! Take these <style=highlight>boots</style>!
+  DialogueText: I'll get you back for what you've done.
   DialogueColor: {r: 0.4126401, g: 1, b: 0.2216981, a: 1}
   Scale: 2
