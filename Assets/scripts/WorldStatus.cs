@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class WorldStatus {
 
-    public const float GameDuration = 30f;
+    public const float GameDuration = 240f;
     public static float GameTimeProgress => Time.time / GameDuration;
 
 }
