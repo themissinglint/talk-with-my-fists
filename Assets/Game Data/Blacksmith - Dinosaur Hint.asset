@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Blacksmith - Dinosaur Hint
   m_EditorClassIdentifier: 
   BackgroundColor: {r: 0.27450982, g: 0.08046139, b: 0.031372547, a: 1}
-  EntitySprite: {fileID: 21300000, guid: 59b759f4ad5d1fb47a3cba523524a66b, type: 3}
-  EntityScaleVector: {x: 2.1, y: 2.1}
-  EntityOffsetVector: {x: 10, y: 0}
+  EntitySprite: {fileID: 21300000, guid: f4b8904b2da2667409d3ddb3a40e307d, type: 3}
+  EntityScaleVector: {x: 2.3, y: 2.3}
+  EntityOffsetVector: {x: 5, y: -94}
   ExpiresFromTime: 0
   ExpirationTime: 0
   ExpiresFromDistance: 1

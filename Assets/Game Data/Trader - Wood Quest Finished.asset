@@ -15,7 +15,7 @@ MonoBehaviour:
   BackgroundColor: {r: 0.27450982, g: 0.27233848, b: 0.031372547, a: 1}
   EntitySprite: {fileID: 21300000, guid: 59b759f4ad5d1fb47a3cba523524a66b, type: 3}
   EntityScaleVector: {x: 2.1, y: 2.1}
-  EntityOffsetVector: {x: 10, y: 0}
+  EntityOffsetVector: {x: 8, y: -45}
   ExpiresFromTime: 0
   ExpirationTime: 0
   ExpiresFromDistance: 1
