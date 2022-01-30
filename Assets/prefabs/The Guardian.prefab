@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133329873}
   m_Layer: 13
-  m_Name: attack point
+  m_Name: home
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -24,12 +24,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133329872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.46, y: 0, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3286790256472895212}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &673488659487912496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562889466885258545}
+  m_Layer: 13
+  m_Name: charge
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1562889466885258545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673488659487912496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.46, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3286790256472895212}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3286790256472895217
 GameObject:
@@ -44,7 +75,7 @@ GameObject:
   - component: {fileID: 3286790256472895214}
   - component: {fileID: 3286790256472895215}
   - component: {fileID: 1381282555096188993}
-  - component: {fileID: 735973382941929195}
+  - component: {fileID: 4573396732713201855}
   m_Layer: 13
   m_Name: The Guardian
   m_TagString: Untagged
@@ -65,6 +96,8 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1133329873}
+  - {fileID: 1562889466885258545}
+  - {fileID: 8693305655920522751}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -173,12 +206,12 @@ MonoBehaviour:
   deathSFX: {fileID: 8300000, guid: 3033ff732db599547a65560a6d300800, type: 3}
   deathsplosion: {fileID: 2914147512315183598, guid: 6464563c948f28f45b61d5d4fdebb9cb,
     type: 3}
-  hp: 16
+  hp: 24
   myKnockback: 4000
   KillToast: {fileID: 0}
   StatChanged: 0
   StatChangeAmount: 0
---- !u!114 &735973382941929195
+--- !u!114 &4573396732713201855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +220,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 3286790256472895217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c1e036f77ed3594aab1832bdac9818b, type: 3}
+  m_Script: {fileID: 11500000, guid: 13f62ee6d3d649f4b86382ef20e48d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  home: {fileID: 1133329873}
+  charge: {fileID: 1562889466885258545}
+  retreat: {fileID: 8693305655920522751}
   speed: 20
+--- !u!1 &4954944982013144303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8693305655920522751}
+  m_Layer: 13
+  m_Name: retreat
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8693305655920522751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4954944982013144303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.26, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3286790256472895212}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
