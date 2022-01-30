@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Acorn : MonoBehaviour
-{
+public class Acorn : MonoBehaviour {
+
+	public InteractionToastData PickupToast;
 	public AudioClip pickupSFX;
 
 	private Rigidbody2D rb;
@@ -28,10 +29,13 @@ public class Acorn : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if(collision.gameObject.layer == 9) { // 9 is player
-
-			//TODO: give player acron.
+			
 			Debug.Log("You get an Acorn!");
+			PlayerStatus.AcornCount++;
 			AudioSource.PlayClipAtPoint(pickupSFX, transform.position);
+			if (InteractionToastDisplay.Instance != null) {
+				InteractionToastDisplay.Instance.PopToast(PickupToast, gameObject, collectableNumber: PlayerStatus.AcornCount);
+			}
 			Destroy(gameObject);
 		}
 	}

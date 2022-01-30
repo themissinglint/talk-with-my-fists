@@ -21,7 +21,7 @@ MonoBehaviour:
   ExpiresFromDistance: 1
   ExpirationDistance: 4.5
   HasDialogue: 1
-  DialogueText: PLEASE! I need them. I NEED them. So <style=highlight>shroomy</style>.
-    So <style=highlight>mushy</style>. Such <style=highlight>fun</style> little <style=highlight>guys</style>.
+  DialogueText: Can ye gather me <style=highlight>10 Acorns</style>? I'd like to
+    help make sure trees survive out there.
   DialogueColor: {r: 0.4126401, g: 1, b: 0.2216981, a: 1}
   Scale: 2
