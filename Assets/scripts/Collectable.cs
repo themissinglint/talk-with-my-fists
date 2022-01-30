@@ -9,9 +9,10 @@ public class Collectable : MonoBehaviour {
 
     protected virtual int CollectableCount => 0;
     
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
+    
     // Start is called before the first frame update
-    void Start() {
+    protected virtual void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
     

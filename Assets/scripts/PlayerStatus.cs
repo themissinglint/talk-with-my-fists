@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public static class PlayerStatus {
 
@@ -41,6 +42,14 @@ public static class PlayerStatus {
         if (PlayerStatDisplay.Instance != null) {
             PlayerStatDisplay.Instance.SetNewStatValue(stat, StatValues[stat]);
         }
+    }
+
+    public static int GiveCreditForKilledEnemy(GameObject enemy) {
+        if (enemy.GetComponent<Bee>() != null) {
+            BeeKillCount++;
+            return BeeKillCount;
+        }
+        return 0;
     }
 
 }

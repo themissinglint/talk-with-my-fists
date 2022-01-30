@@ -7,6 +7,8 @@ public class EnemyDamage : MonoBehaviour {
 	public AudioClip attackSFX, deathSFX;
 	public GameObject deathsplosion;
 
+	public InteractionToastData KillToast;
+	
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.gameObject.layer == 9) { // 9 is player
 
@@ -15,6 +17,10 @@ public class EnemyDamage : MonoBehaviour {
 				// player hurts bee
 				AudioSource.PlayClipAtPoint(deathSFX, transform.position);
 				Instantiate(deathsplosion, transform.position, Quaternion.identity);
+				int killCount = PlayerStatus.GiveCreditForKilledEnemy(gameObject);
+				if (KillToast != null && InteractionToastDisplay.Instance != null) {
+					InteractionToastDisplay.Instance.PopToast(KillToast, gameObject, collectableNumber:killCount);
+				}
 				Destroy(gameObject);
 
 			} else {

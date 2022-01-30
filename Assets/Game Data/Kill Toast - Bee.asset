@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
-  m_Name: Pickup Toast - Acorn
+  m_Name: Kill Toast - Bee
   m_EditorClassIdentifier: 
   BackgroundColor: {r: 0.004983983, g: 0.1509434, b: 0.07658671, a: 1}
   EntitySprite: {fileID: 21300000, guid: 2d1be8c4c7bd5774996ff2e9317cc605, type: 3}

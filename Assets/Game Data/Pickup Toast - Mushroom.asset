@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
   m_Name: Pickup Toast - Mushroom
   m_EditorClassIdentifier: 
-  BackgroundColor: {r: 0, g: 0.20754719, b: 0.103773594, a: 1}
-  EntitySprite: {fileID: 21300000, guid: 2d1be8c4c7bd5774996ff2e9317cc605, type: 3}
+  BackgroundColor: {r: 0.02950339, g: 0.051717624, b: 0.16037738, a: 1}
+  EntitySprite: {fileID: 21300000, guid: 672c83ba33f152247b6d3dd9edd265e2, type: 3}
   EntityScaleVector: {x: 1, y: 1}
-  EntityOffsetVector: {x: 8, y: -6}
+  EntityOffsetVector: {x: -10, y: -6}
   ExpiresFromTime: 1
   ExpirationTime: 1.5
   ExpiresFromDistance: 0
