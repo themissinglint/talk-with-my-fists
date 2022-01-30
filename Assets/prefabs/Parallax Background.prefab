@@ -152,7 +152,7 @@ MonoBehaviour:
   - {x: 0.4, y: 0.04, z: 0}
   - {x: 0.8, y: 0.08, z: 0}
   mainCamera: {fileID: 0}
-  daySeconds: 5
+  daySeconds: 30
 --- !u!1 &4980954021554904234
 GameObject:
   m_ObjectHideFlags: 0

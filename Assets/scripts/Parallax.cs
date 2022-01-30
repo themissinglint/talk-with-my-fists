@@ -40,7 +40,7 @@ public class Parallax : MonoBehaviour
 		if (time > daySeconds) {
 			time -= daySeconds;
 		}
-		float alpha = Mathf.Sin(time / daySeconds * Mathf.PI * 2);
+		float alpha = Mathf.Sin(time / daySeconds * Mathf.PI * 2) / 2f + .5f;
 		for(int i=0; i < dayLayers.Length; i++) {
 			Color tint = dayLayers[i].color;
 			tint.a = alpha;
