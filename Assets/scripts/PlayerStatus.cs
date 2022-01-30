@@ -40,7 +40,7 @@ public static class PlayerStatus {
     };
 
     public static void AddStat(PlayerStat stat, float amountAdded) {
-        StatValues[stat] = StatValues[stat] + amountAdded;
+        StatValues[stat] = Mathf.Clamp01(StatValues[stat] + amountAdded);
         if (PlayerStatDisplay.Instance != null) {
             PlayerStatDisplay.Instance.SetNewStatValue(stat, StatValues[stat]);
         }
