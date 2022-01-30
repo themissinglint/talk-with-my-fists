@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1920343700977360522}
   - component: {fileID: 8493169424954973820}
   - component: {fileID: 8528312279370524890}
+  - component: {fileID: 5491367907816767798}
+  - component: {fileID: -3659514466703863852}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -140,3 +142,71 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5491367907816767798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533502083710759679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd269670c58af640b87e92563f8fdd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets: []
+--- !u!114 &-3659514466703863852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533502083710759679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468001a283b0955458064cf128e6d1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VolumeID: Shroomed
+  ValueCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -0.00000012023435
+      inSlope: -0.009519718
+      outSlope: 11.02898
+      tangentMode: 1
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.033987958
+    - serializedVersion: 3
+      time: 0.19988789
+      value: 1.0002706
+      inSlope: -0.00000029098874
+      outSlope: 0.004479933
+      tangentMode: 1
+      weightedMode: 3
+      inWeight: 0.49281126
+      outWeight: 0.6175139
+    - serializedVersion: 3
+      time: 0.81114113
+      value: 0.5214564
+      inSlope: -3.6298807
+      outSlope: -3.7304037
+      tangentMode: 1
+      weightedMode: 3
+      inWeight: 0.106691435
+      outWeight: 0.0657336
+    - serializedVersion: 3
+      time: 2.598054
+      value: -0.00080413464
+      inSlope: -0.00096006633
+      outSlope: 0.0049134525
+      tangentMode: 1
+      weightedMode: 3
+      inWeight: 0.8405558
+      outWeight: 0.32275587
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
