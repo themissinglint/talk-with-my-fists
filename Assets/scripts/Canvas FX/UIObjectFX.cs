@@ -19,7 +19,10 @@ public class UIObjectFX : MonoBehaviour {
         NPCPerkUpPulse,
         
         // Gentle Squash.
-        NPCIdle
+        NPCIdle,
+        
+        // Pop when a collectable overwrites another one in the toast display.
+        CollectionPop
         
     }
 

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
+  m_Name: Pickup Toast - Acorn
+  m_EditorClassIdentifier: 
+  BackgroundColor: {r: 0, g: 0.20754719, b: 0.103773594, a: 1}
+  EntitySprite: {fileID: 21300000, guid: 2d1be8c4c7bd5774996ff2e9317cc605, type: 3}
+  EntityScaleVector: {x: 1, y: 1}
+  EntityOffsetVector: {x: 8, y: -6}
+  ExpiresFromTime: 1
+  ExpirationTime: 1.5
+  ExpiresFromDistance: 0
+  ExpirationDistance: 0
+  HasDialogue: 0
+  DialogueText: 
+  DialogueColor: {r: 0, g: 0, b: 0, a: 0}
+  Scale: 1

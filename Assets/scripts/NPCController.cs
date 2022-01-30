@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour {
 
-    public InteractionToastData Toast;
     public GameObject FXRoot;
 
     private bool _firstUpdate;
@@ -13,7 +12,6 @@ public class NPCController : MonoBehaviour {
     public Vector2 IdleBounceDir;
     public float IdleBounceSpeed;
     private float _idleBounceTimer;
-    
     
     public float PerkUpAmp;
     public Vector2 PerkUpDir;
@@ -35,8 +33,12 @@ public class NPCController : MonoBehaviour {
     
     public void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            InteractionToastDisplay.Instance.PopToast(Toast, gameObject);
-            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            InteractWithPlayer();
         }
     }
+
+    protected virtual void InteractWithPlayer() {
+        
+    }
+    
 }
