@@ -59,7 +59,7 @@ public class PlayerDamage : MonoBehaviour
 
 	public void TakeDamage(GameObject hurter) {
 
-		Vector3 knockbackVector = new Vector3(Mathf.Sign(transform.position.x - hurter.transform.position.x), 0f, 0f);
+		Vector3 knockbackVector = new Vector3(Mathf.Sign(transform.position.x - hurter.transform.position.x), 0.1f, 0f);
 		controller.Parameters.MaxVelocity = new Vector2(100f, 100f);//back to maxk speed so the knockback works.
 		controller.SetForce(knockbackVector * knockback);
 		stunTimer = stunTime;
