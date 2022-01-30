@@ -2,32 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wood : MonoBehaviour
-{
+public class Wood : Collectable {
+	
 	public float attractionForce = 1f;
-	public AudioClip pickupSFX;
 	private GameObject player;
-	private Rigidbody2D rb;
-	// Start is called before the first frame update
-	void Start()
-    {
+	
+	protected override int CollectableCount => PlayerStatus.WoodCount;
+	
+	protected override void Start() {
 		player = GameObject.FindGameObjectWithTag("Player");
 		rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Update() {
 		rb.AddForce((player.transform.position - transform.position).normalized * attractionForce);
     }
 
-	private void OnTriggerEnter2D(Collider2D collision) {
+	protected override void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.gameObject.layer == 9) { // 9 is player
-
-			//TODO: give player acron.
+			PlayerStatus.WoodCount++;
 			Debug.Log("You get an Wood!");
-			AudioSource.PlayClipAtPoint(pickupSFX, transform.position);
-			Destroy(gameObject);
 		}
+		base.OnTriggerEnter2D(collision);
 	}
 }

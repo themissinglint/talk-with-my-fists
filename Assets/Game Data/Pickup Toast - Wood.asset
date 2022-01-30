@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0759a59486adafc41909ceb47cdc391f, type: 3}
-  m_Name: Pickup Toast - Mushroom
+  m_Name: Pickup Toast - Wood
   m_EditorClassIdentifier: 
   BackgroundColor: {r: 0.02950339, g: 0.051717624, b: 0.16037738, a: 1}
   EntitySprite: {fileID: 21300000, guid: 672c83ba33f152247b6d3dd9edd265e2, type: 3}
