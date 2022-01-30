@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerStatDisplay : MonoBehaviour {
 
+    public static PlayerStatDisplay Instance;
+    
     public List<StatWedge> Wedges;
     public float MaxAngle = 0.23f;
     public float FillDampTime;
@@ -18,12 +20,22 @@ public class PlayerStatDisplay : MonoBehaviour {
     public float TestIncreaseAmount;
 
     private bool _firstUpdate = true;
+
+    private void Awake() {
+        Instance = this;
+    }
     
     private void FirstUpdate() {
         _firstUpdate = false;
         foreach (StatWedge statWedge in Wedges) { 
             UIObjectFX.DoEffect(UIObjectFX.EffectType.AttributeGainedPulse, statWedge.GameObject, 0.1f);
         }
+    }
+
+    public void SetNewStatValue(PlayerStat stat, float newValue) {
+        StatWedge wedge = Wedges.First(e => e.Stat == TestIncreasedStat);
+        wedge.CurProgress = Mathf.Clamp01(newValue);
+        UIObjectFX.DoEffect(UIObjectFX.EffectType.AttributeGainedPulse, wedge.GameObject, PulseMagnitude);
     }
     
     [Button("Test Increased Stat")]
