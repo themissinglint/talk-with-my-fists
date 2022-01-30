@@ -4,31 +4,63 @@ using UnityEngine;
 public class NPCControllerGardener : NPCController {
 
     [Header("Dialogue")]
-    public InteractionToastData AcornQuestGiving;
-    public InteractionToastData AcornQuestCompletion;
+    public InteractionToastData AcornFirstQuestGiving;
+    public InteractionToastData AcornFirstQuestCompletion;
+    public InteractionToastData AcornSecondQuestGiving;
+    public InteractionToastData AcornSecondQuestCompletion;
     public InteractionToastData BeeWarning;
     public InteractionToastData BeeFirstQuestCompleted;
     public InteractionToastData BeeWarningSecond;
     public InteractionToastData BeeSecondQuestCompleted;
     public InteractionToastData FinalDialogue;
 
-    private const int AcornsReq = 43;
+    private const int AcornsReqFirst = 13;
+    private const int AcornsReqSecond = 28;
     
     
     protected override void InteractWithPlayer() {
+        
+        // Be upset about lack of bees.
+        if (!PlayerStatus.HasCompletedGardenerBeeQuest && PlayerStatus.BeeKillCount >= 11) {
+            InteractionToastDisplay.Instance.PopToast(BeeFirstQuestCompleted, gameObject);
+            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            CompleteFirstBeeQuest();
+        }
+        
+        // Be vengeful about lack of bees.
+        if (!PlayerStatus.HasCompletedGardenerSecondBeeQuest && PlayerStatus.BeeKillCount >= 20) {
+            InteractionToastDisplay.Instance.PopToast(BeeSecondQuestCompleted, gameObject);
+            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            CompleteSecondBeeQuest();
+        }
 
         // Let the player know this character wants acorns!
-        if (!PlayerStatus.HasCompletedGardenerAcornQuest && PlayerStatus.AcornCount < AcornsReq) {
-            InteractionToastDisplay.Instance.PopToast(AcornQuestGiving, gameObject);
+        if (!PlayerStatus.HasCompletedGardenerFirstAcornQuest && PlayerStatus.AcornCount < AcornsReqFirst) {
+            InteractionToastDisplay.Instance.PopToast(AcornFirstQuestGiving, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
             return;
         }
         
-        // Complete the acorn quest.
-        if (!PlayerStatus.HasCompletedGardenerAcornQuest && PlayerStatus.AcornCount >= AcornsReq) {
-            InteractionToastDisplay.Instance.PopToast(AcornQuestCompletion, gameObject);
+        // Complete the first acorn quest.
+        if (!PlayerStatus.HasCompletedGardenerFirstAcornQuest && PlayerStatus.AcornCount >= AcornsReqFirst) {
+            InteractionToastDisplay.Instance.PopToast(AcornFirstQuestCompletion, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
-            CompleteAcornQuest();
+            CompleteFirstAcornQuest();
+            return;
+        }
+        
+        // Let the player know this character wants acorns!
+        if (!PlayerStatus.HasCompletedGardenerSecondAcornQuest && PlayerStatus.AcornCount < AcornsReqSecond) {
+            InteractionToastDisplay.Instance.PopToast(AcornFirstQuestGiving, gameObject);
+            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            return;
+        }
+        
+        // Complete the second acorn quest.
+        if (!PlayerStatus.HasCompletedGardenerSecondAcornQuest && PlayerStatus.AcornCount >= AcornsReqSecond) {
+            InteractionToastDisplay.Instance.PopToast(AcornFirstQuestCompletion, gameObject);
+            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
+            CompleteSecondAcornQuest();
             return;
         }
 
@@ -38,24 +70,10 @@ public class NPCControllerGardener : NPCController {
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
         }
 
-        // Be upset about lack of bees.
-        if (!PlayerStatus.HasCompletedGardenerBeeQuest && PlayerStatus.BeeKillCount >= 11) {
-            InteractionToastDisplay.Instance.PopToast(BeeFirstQuestCompleted, gameObject);
-            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
-            CompleteFirstBeeQuest();
-        }
-
         // Warn the player again about killing bees.
         if (!PlayerStatus.HasCompletedGardenerSecondBeeQuest && PlayerStatus.BeeKillCount < 20) {
             InteractionToastDisplay.Instance.PopToast(BeeWarningSecond, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
-        }
-
-        // Be vengeful about lack of bees.
-        if (!PlayerStatus.HasCompletedGardenerSecondBeeQuest && PlayerStatus.BeeKillCount >= 20) {
-            InteractionToastDisplay.Instance.PopToast(BeeSecondQuestCompleted, gameObject);
-            UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
-            CompleteSecondBeeQuest();
         }
         
         InteractionToastDisplay.Instance.PopToast(FinalDialogue, gameObject);
@@ -63,9 +81,20 @@ public class NPCControllerGardener : NPCController {
         
     }
 
-    private void CompleteAcornQuest() {
-        PlayerStatus.AcornCount -= AcornsReq;
-        PlayerStatus.HasCompletedGardenerAcornQuest = true;
+    private void CompleteFirstAcornQuest() {
+        PlayerStatus.AcornCount -= AcornsReqFirst;
+        PlayerStatus.HasCompletedGardenerFirstAcornQuest = true;
+        PlayerInstance.Instance.GetComponent<CharacterJump>().NumberOfJumps++;
+        PlayerStatus.AddStat(PlayerStat.Exploration, 0.14f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Achievement, .14f), 0.6f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Violence, -.07f), 1.2f);
+        ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Social, .14f), 1.8f);
+        ThreadingUtil.Instance.RunLater(() => UnlockableDisplay.Instance.DoUnlockDisplay("Double Jump"), 1.5f);
+    }
+
+    private void CompleteSecondAcornQuest() {
+        PlayerStatus.AcornCount -= AcornsReqSecond;
+        PlayerStatus.HasCompletedGardenerSecondAcornQuest = true;
         PlayerInstance.Instance.GetComponent<CharacterJump>().NumberOfJumps++;
         PlayerStatus.AddStat(PlayerStat.Exploration, 0.14f);
         ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Achievement, .14f), 0.6f);

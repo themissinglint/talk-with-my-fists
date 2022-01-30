@@ -5,7 +5,8 @@ public static class PlayerStatus {
 
     // Acorn Quest
     public static int AcornCount;
-    public static bool HasCompletedGardenerAcornQuest;
+    public static bool HasCompletedGardenerFirstAcornQuest;
+    public static bool HasCompletedGardenerSecondAcornQuest;
     
     // Mushroom Quest
     public static int MushroomCount;
