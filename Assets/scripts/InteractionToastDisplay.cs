@@ -16,6 +16,8 @@ public class InteractionToastDisplay : MonoBehaviour {
     public Image BackgroundImage;
     public Image EntityImage;
     public RectTransform EntityRT;
+    public Animator CollectableAnimator;
+    public TextMeshProUGUI CollectableText;
     
     // Expansion
     public float ClosedSize;
@@ -50,8 +52,9 @@ public class InteractionToastDisplay : MonoBehaviour {
         public float Distance => SourceObject == null ? Mathf.Infinity : Vector2.Distance(Instance.PlayerObjectForTest.transform.position, SourceObject.transform.position);
         public bool IsExpiring;
         public float ExpireStartTime;
-        public float TimeSpentExpiring => Time.time - ExpireStartTime; 
-        
+        public float TimeSpentExpiring => Time.time - ExpireStartTime;
+        public int CollectableCount;
+
         public bool ShouldStartExpiring() {
             if (Data.ExpiresFromTime && Age > Data.ExpirationTime) return true;
             if (Data.ExpiresFromDistance && Distance > Data.ExpirationDistance) return true;
@@ -87,6 +90,8 @@ public class InteractionToastDisplay : MonoBehaviour {
     private float _dialogueProgress;
     private float _dialogueDisplayProgressCurrent;
     private float _dialogueDisplayProgressVelocity;
+
+    private int _collectableBounceCount;
     
     
     private void Awake() {
@@ -97,22 +102,31 @@ public class InteractionToastDisplay : MonoBehaviour {
         _scalePrev = _scaleNext = ClosedSize;
     }
 
-    public void PopToast(InteractionToastData data, GameObject source) {
+    public void PopToast(InteractionToastData data, GameObject source, int collectableNumber = 0) {
         if (!data.ExpiresFromDistance && !data.ExpiresFromTime) {
             Debug.LogError($"{nameof(PopToast)} called with a data that cannot expire!");
         }
 
-        if (CanActivateToast(data)) {
+        if (_currentToast != null && _currentToast.Data.Scale == InteractionToastData.ToastScale.small && data.Scale == InteractionToastData.ToastScale.small) {
+            _collectableBounceCount++;
+            CollectableAnimator.Play("Toast Small Item Bounce" + (_collectableBounceCount % 2 == 0 ? "" : " 0"));
+        }
+        
+        CollectableText.gameObject.SetActive(collectableNumber > 0);
+        CollectableText.text = collectableNumber.ToString();
+
+        if (CanActivateToast()) {
             _currentToast = new Toast() {
                 Data = data,
                 SourceObject = source,
-                StartTime = Time.time
+                StartTime = Time.time,
+                CollectableCount = collectableNumber
             };
             ActivateCurrentToast();
         }
     }
 
-    private bool CanActivateToast(InteractionToastData newData) {
+    private bool CanActivateToast() {
         if (_currentToast == null) return true;
         if (_currentToast.Data.Scale == InteractionToastData.ToastScale.small) return true;
         return false;
@@ -121,6 +135,7 @@ public class InteractionToastDisplay : MonoBehaviour {
     private void ActivateCurrentToast() {
         BackgroundImage.color = _currentToast.Data.BackgroundColor;
         EntityImage.sprite = _currentToast.Data.EntitySprite;
+        EntityImage.color = Color.white;
         EntityRT.localScale = _currentToast.Data.EntityScaleVector;
         _latestToastTargetScale = _currentToast.Data.Scale;
         _latestToastEntityOffsetVector = _currentToast.Data.EntityOffsetVector;
@@ -162,11 +177,16 @@ public class InteractionToastDisplay : MonoBehaviour {
         DialogueBodyCanvasGroup.alpha = Mathf.Lerp(0f, 1f, DialogueCurveBodyAlpha.Evaluate(_dialogueDisplayProgressCurrent));
         DialogueTextCanvasGroup.alpha = Mathf.Lerp(0f, 1f, DialogueCurveTextAlpha.Evaluate(_dialogueDisplayProgressCurrent));
 
+        if (_currentToast != null && !_currentToast.IsExpiring && _currentToast.CollectableCount > 0) {
+            CollectableText.gameObject.SetActive(_scaleCurrent >= SmallSize - 40f);
+        }
+        
         // Expire the current toast if appropriate.
         if (_currentToast == null) return;
         if (!_currentToast.IsExpiring && _currentToast.ShouldStartExpiring()) {
             _currentToast.IsExpiring = true;
             _currentToast.ExpireStartTime = Time.time;
+            CollectableText.gameObject.SetActive(false);
         }
         if (_currentToast.ShouldExpire()) {
             _currentToast = null;
