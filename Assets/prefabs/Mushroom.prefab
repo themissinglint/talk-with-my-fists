@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8195832320263562525}
-  - component: {fileID: 2783026477261984351}
+  - component: {fileID: 5370271451095737996}
   - component: {fileID: 1920343700977360522}
   - component: {fileID: 8493169424954973820}
   - component: {fileID: 8528312279370524890}
   m_Layer: 0
-  m_Name: acorn
+  m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2783026477261984351
+--- !u!114 &5370271451095737996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3533502083710759679}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e03c5dfcd9ea941b7bc22ae3383df7, type: 3}
+  m_Script: {fileID: 11500000, guid: 7db5933e5d139244f9186e811fe71f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupToast: {fileID: 11400000, guid: 33f42c186dbdbf2458ea8ac964ae6baf, type: 2}
-  pickupSFX: {fileID: 8300000, guid: 617f678d0ca691046a5d9f1d75e4de1f, type: 3}
+  PickupToast: {fileID: 11400000, guid: 2eccb0b063ec94f498e00623d76f4012, type: 2}
+  pickupSFX: {fileID: 8300000, guid: 7ea1224718dfa9948bc2e20932fd0212, type: 3}
 --- !u!212 &1920343700977360522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6d8e91dd3aa0b364faca0241863c590c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 672c83ba33f152247b6d3dd9edd265e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +116,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 1
 --- !u!50 &8528312279370524890
 Rigidbody2D:
   serializedVersion: 4
