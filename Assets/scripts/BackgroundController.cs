@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class BackgroundController : MonoBehaviour {
 
     public List<BackgroundLayer> BackgroundLayers;
+    public PostProcessVolume NightPPV;
     
 
     private Vector2 _lastPos;
@@ -28,6 +30,7 @@ public class BackgroundController : MonoBehaviour {
             }
         }
         _lastPos = transform.position;
+        NightPPV.weight = WorldStatus.GameTimeProgress;
     }
 
 }
