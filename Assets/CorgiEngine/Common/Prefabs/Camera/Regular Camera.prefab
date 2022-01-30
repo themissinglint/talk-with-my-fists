@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557662911}
   - component: {fileID: 557662912}
+  - component: {fileID: 1569273463}
   m_Layer: 0
   m_Name: Achievement Theme
   m_TagString: Untagged
@@ -400,6 +401,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!169 &1569273463
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557662910}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.4552069
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &784630968
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 967825287}
   - component: {fileID: 967825288}
+  - component: {fileID: 1566133615}
   m_Layer: 0
   m_Name: Social Theme
   m_TagString: Untagged
@@ -577,6 +604,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!169 &1566133615
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967825286}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.4552069
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1182075958
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182075959}
   - component: {fileID: 1182075960}
+  - component: {fileID: 726767532}
   m_Layer: 0
   m_Name: Exploration Theme
   m_TagString: Untagged
@@ -705,6 +758,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!169 &726767532
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182075958}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.4552069
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1617446951
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617446952}
   - component: {fileID: 1617446953}
+  - component: {fileID: 1240988200}
   m_Layer: 0
   m_Name: Neutral Theme
   m_TagString: Untagged
@@ -833,6 +912,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!169 &1240988200
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617446951}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.4552069
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1888085619
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888085620}
   - component: {fileID: 1888085621}
+  - component: {fileID: 270860922}
   m_Layer: 0
   m_Name: Violence Theme
   m_TagString: Untagged
@@ -961,6 +1066,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!169 &270860922
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888085619}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.4552069
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2061365020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,24 +1141,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NeutralSource: {fileID: 1617446953}
+  NeutralLowPass: {fileID: 1240988200}
   NeutralMax: 0.2
   NeutralMin: 0.08
+  LowPassHzByDayProgress:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 10000
+      inSlope: 400.87766
+      outSlope: 400.87766
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 559.4641
+      inSlope: -275.17532
+      outSlope: -275.17532
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.12157333
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   DampingTime: 1.5
   Layers:
   - Source: {fileID: 967825288}
     Stat: 2
+    LowPass: {fileID: 1566133615}
     ValueCurrent: 0
     ValueVelocity: 0
   - Source: {fileID: 1888085621}
     Stat: 3
+    LowPass: {fileID: 270860922}
     ValueCurrent: 0
     ValueVelocity: 0
   - Source: {fileID: 1182075960}
     Stat: 1
+    LowPass: {fileID: 726767532}
     ValueCurrent: 0
     ValueVelocity: 0
   - Source: {fileID: 557662912}
     Stat: 0
+    LowPass: {fileID: 1569273463}
     ValueCurrent: 0
     ValueVelocity: 0
 --- !u!1 &3315347901073806179
@@ -1356,6 +1515,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5326453566905122764, guid: ccf85586502cf0d4abd9734b4bff3a55,
+        type: 3}
+      propertyPath: NightPPV
+      value: 
+      objectReference: {fileID: 784630970}
     - target: {fileID: 5326453566905122764, guid: ccf85586502cf0d4abd9734b4bff3a55,
         type: 3}
       propertyPath: BackgroundLayers.Array.size
