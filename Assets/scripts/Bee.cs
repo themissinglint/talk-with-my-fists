@@ -36,7 +36,6 @@ public class Bee : MonoBehaviour
 
 		// flip sprite towards target:
 		spriteRenderer.flipX = transform.position.x < patrolPoints[patrolPointIdx].x;
-
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
@@ -52,7 +51,7 @@ public class Bee : MonoBehaviour
 			} else {
 				// bee hurts player
 				AudioSource.PlayClipAtPoint(beeSting, transform.position);
-
+				plrChar.GetComponent<PlayerDamage>().TakeDamage(gameObject);
 			}
 		}
 	}
