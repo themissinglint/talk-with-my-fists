@@ -46,7 +46,7 @@ public class NPCControllerBlacksmith : NPCController {
         
         // Let the player know this character wants MORE mushrooms!
         if (!PlayerStatus.HasCompletedSecondBlacksmithMushroomQuest && PlayerStatus.MushroomCount < MushroomsReqSecond) {
-            InteractionToastDisplay.Instance.PopToast(MushroomQuestFirstStart, gameObject);
+            InteractionToastDisplay.Instance.PopToast(MushroomQuestSecondStart, gameObject);
             UIObjectFX.DoEffect(UIObjectFX.EffectType.NPCPerkUpPulse, FXRoot, new FXArgs() {Amplitude = PerkUpAmp, InputVector = PerkUpDir, Speed = PerkUpSpeed});
             return;
         }
