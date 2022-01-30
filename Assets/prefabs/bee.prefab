@@ -144,6 +144,7 @@ MonoBehaviour:
     type: 3}
   hp: 1
   myKnockback: 10
+  hurtsPlayer: 1
   KillToast: {fileID: 11400000, guid: 69ea16ed8f8f03c41a3d369fbc18759f, type: 2}
   StatChanged: 3
   StatChangeAmount: 0.0667

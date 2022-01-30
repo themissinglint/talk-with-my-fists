@@ -1780,7 +1780,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
@@ -2410,7 +2410,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
@@ -3115,7 +3115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
@@ -3204,7 +3204,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
@@ -3608,7 +3608,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
@@ -3886,7 +3886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
@@ -3975,7 +3975,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2065100298, guid: 7450f3fab763eda44b032d592227b2e7, type: 3}
       propertyPath: speed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7701063880711826945, guid: 7450f3fab763eda44b032d592227b2e7,
         type: 3}
