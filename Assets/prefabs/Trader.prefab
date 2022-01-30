@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9a398f45d2fe6479c79fb0096c66f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FXRoot: {fileID: 0}
-  IdleEffect: 0
+  FXRoot: {fileID: 7801544994168105578}
+  IdleEffect: 2
   IdleBounceTime: 1.5
   IdleBounceAmp: -0.17
   IdleBounceDir: {x: 0, y: 1}
@@ -288,6 +288,12 @@ PrefabInstance:
 --- !u!4 &7801544994167816800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 436982, guid: 6a8f0a0d50e331745b716e95476716bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 7801544994168187030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7801544994168105578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180988, guid: 6a8f0a0d50e331745b716e95476716bf,
     type: 3}
   m_PrefabInstance: {fileID: 7801544994168187030}
   m_PrefabAsset: {fileID: 0}
