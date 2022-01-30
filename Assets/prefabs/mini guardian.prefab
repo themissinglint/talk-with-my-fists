@@ -174,7 +174,7 @@ MonoBehaviour:
   deathsplosion: {fileID: 2914147512315183598, guid: 6464563c948f28f45b61d5d4fdebb9cb,
     type: 3}
   hp: 6
-  myKnockback: 4000
+  myKnockback: 200
   hurtsPlayer: 1
   KillToast: {fileID: 0}
   StatChanged: 0
