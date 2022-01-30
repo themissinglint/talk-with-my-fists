@@ -142,10 +142,9 @@ MonoBehaviour:
   deathSFX: {fileID: 8300000, guid: 3033ff732db599547a65560a6d300800, type: 3}
   deathsplosion: {fileID: 2914147512315183598, guid: 6464563c948f28f45b61d5d4fdebb9cb,
     type: 3}
-  hp: 1
   KillToast: {fileID: 11400000, guid: 69ea16ed8f8f03c41a3d369fbc18759f, type: 2}
   StatChanged: 3
-  StatChangeAmount: 0.033
+  StatChangeAmount: 0.0667
 --- !u!114 &2065100298
 MonoBehaviour:
   m_ObjectHideFlags: 0
