@@ -227,6 +227,7 @@ MonoBehaviour:
   charge: {fileID: 1562889466885258545}
   retreat: {fileID: 8693305655920522751}
   speed: 20
+  hpToRampage: 10
 --- !u!1 &4954944982013144303
 GameObject:
   m_ObjectHideFlags: 0
