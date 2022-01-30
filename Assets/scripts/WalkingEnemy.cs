@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bee : MonoBehaviour
+public class WalkingEnemy: MonoBehaviour
 {
 	private Transform[] patrolPath;
 	public float speed;
@@ -25,15 +25,16 @@ public class Bee : MonoBehaviour
 
 	// Update is called once per frame
 	void Update() {
+		// this is all in 1D (just X):
+		rb.AddForce(new Vector3(Mathf.Sign(patrolPoints[patrolPointIdx].x - transform.position.x), 0f, 0f) * speed);
 
-		rb.AddForce((patrolPoints[patrolPointIdx] - transform.position).normalized * speed);
-
-		if((transform.position - patrolPoints[patrolPointIdx]).sqrMagnitude < .8f * .8f) {
-			Debug.Log("Bee to next point, " + patrolPointIdx + " of " + patrolPoints.Length);
+		if(Mathf.Abs(transform.position.x - patrolPoints[patrolPointIdx].x) < .4f) {
+			Debug.Log("Walker to next point, " + patrolPointIdx + " of " + patrolPoints.Length);
 			patrolPointIdx = (patrolPointIdx + 1) % patrolPoints.Length;
 		}
 
 		// flip sprite towards target:
 		spriteRenderer.flipX = transform.position.x < patrolPoints[patrolPointIdx].x;
 	}
+
 }

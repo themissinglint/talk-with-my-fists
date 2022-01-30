@@ -62,3 +62,6 @@ Assets/Plugins/Sirenix/Odin Inspector/Config/Resources.meta
 Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix.meta
 Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset
 Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset.meta
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+UserSettings/Layouts/default-2021.dwlt
