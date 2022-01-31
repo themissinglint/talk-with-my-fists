@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class PlayerStatus {
+    
+    // Game Ending State
+    public static bool PlayerHasWon;
+    public static bool PlayerHasLost;
 
     // Acorn Quest
     public static int AcornCount;

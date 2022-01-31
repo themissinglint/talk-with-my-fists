@@ -110,7 +110,7 @@ public class NPCControllerBlacksmith : NPCController {
     }
     
     private void CompleteBeeQuest () {
-        PlayerStatus.HasCompletedBlacksmithMushroomQuest = true;
+        PlayerStatus.HasCompletedBlacksmithBeeQuest = true;
         PlayerStatus.DamageDealtByDash += 1f;
         PlayerStatus.AddStat(PlayerStat.Violence, 0.14f);
         ThreadingUtil.Instance.RunLater(() => PlayerStatus.AddStat(PlayerStat.Achievement, .14f), 0.6f);
