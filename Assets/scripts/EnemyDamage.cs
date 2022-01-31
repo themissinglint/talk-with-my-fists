@@ -42,6 +42,10 @@ public class EnemyDamage : MonoBehaviour {
 					}
 					PlayerStatus.AddStat(StatChanged, StatChangeAmount);
 					Destroy(gameObject);
+					LootPinata[] loots = GetComponents<LootPinata>();
+					foreach(LootPinata loot in loots) {
+						loot.Explode();
+					}
 				} else {
 					Debug.Log("dashing player triggered, HP is " + hp);
 					Vector3 knockbackVector = new Vector3(Mathf.Sign(transform.position.x - plrChar.transform.position.x), 0.1f, 0f);
