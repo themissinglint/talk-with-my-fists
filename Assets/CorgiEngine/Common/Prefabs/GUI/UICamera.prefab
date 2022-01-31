@@ -4531,7 +4531,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   OutlineBlackStrength: 1
   TimerText: {fileID: 1551486099}
-  FinalSecondsThreshold: 10
+  FinalSecondsThreshold: 20
   TimerTextScaleByTimeSinceLastSecond:
     serializedVersion: 2
     m_Curve:
