@@ -18,6 +18,8 @@ public class EndGameScreenWipe : MonoBehaviour {
     public float WinTime;
     public Gradient WinGradient;
 
+    private bool _hasDoneGoodEnding;
+
     private void Update() {
 
         if (!PlayerStatus.PlayerHasLost && !PlayerStatus.PlayerHasWon) {
@@ -36,8 +38,10 @@ public class EndGameScreenWipe : MonoBehaviour {
 
         if (PlayerStatus.PlayerHasWon) {
             WhiteCover.color = WinGradient.Evaluate(WorldStatus.TimeSinceGameEnd / WinTime);
+            if (_hasDoneGoodEnding) return;
             if (WorldStatus.TimeSinceGameEnd > 1f) {
-                // TODO: Scene Load.
+                _hasDoneGoodEnding = true;
+                SceneManager.LoadScene("Good Ending Scene");
             }
         }
         
