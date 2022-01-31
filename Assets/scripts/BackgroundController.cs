@@ -14,11 +14,6 @@ public class BackgroundController : MonoBehaviour {
     public PostProcessVolume DoomPPV;
 
     public AnimationCurve DoomCurve;
-
-    [Header("Game Loss")]
-    public float WhiteCoverColorTime;
-    public Gradient WhiteCoverColorByTimeSinceGameEnd;
-    public Image WhiteCover;
     
     
     private Vector2 _lastPos;
@@ -46,10 +41,6 @@ public class BackgroundController : MonoBehaviour {
         float doomValue = DoomCurve.Evaluate(doomProgress);
         DoomPPV.weight = doomValue;
         CameraController.Shake(new Vector3(doomValue * .4f, 0.25f, 1f));
-        WhiteCover.color = WhiteCoverColorByTimeSinceGameEnd.Evaluate(WorldStatus.TimeSinceGameEnd / WhiteCoverColorTime);
-        if (WorldStatus.TimeSinceGameEnd > 6.5f) {
-            Application.Quit();
-        }
     }
 
 }
