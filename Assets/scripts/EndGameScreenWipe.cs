@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class EndGameScreenWipe : MonoBehaviour {
     
     public Image WhiteCover;
+    public Image Logo;
     
     [Header("Game Loss")]
     public float LossTime;
     public Gradient LossGradient;
+    public Gradient LossLogoGradient;
 
     [Header("GameWin")]
     public float WinTime;
@@ -26,6 +28,7 @@ public class EndGameScreenWipe : MonoBehaviour {
 
         if (PlayerStatus.PlayerHasLost) {
             WhiteCover.color = LossGradient.Evaluate(WorldStatus.TimeSinceGameEnd / LossTime);
+            Logo.color = LossLogoGradient.Evaluate(WorldStatus.TimeSinceGameEnd / LossTime);
             if (WorldStatus.TimeSinceGameEnd > LossTime) {
                 Application.Quit();
             }
