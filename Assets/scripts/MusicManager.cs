@@ -23,13 +23,13 @@ public class MusicManager : MonoBehaviour {
     
     private void Update() {
         float avgLayerVolume = Layers.Average(e => e.ValueCurrent);
-        float neutralTargetVolume = Mathf.Lerp(NeutralMax, NeutralMin, avgLayerVolume);
+        float neutralTargetVolume = WorldStatus.TimeSinceGameEnd > 0f ? 0f : Mathf.Lerp(NeutralMax, NeutralMin, avgLayerVolume);
         _neutralValueCurrent = Mathf.SmoothDamp(_neutralValueCurrent, neutralTargetVolume, ref _neutralValueVelocity, DampingTime);
         NeutralSource.volume = _neutralValueCurrent;
         NeutralLowPass.cutoffFrequency = LowPassHzByDayProgress.Evaluate(WorldStatus.GameTimeProgress);
 
         foreach (MusicLayer layer in Layers) {
-            float targetValue = Mathf.Floor(PlayerStatus.StatValues[layer.Stat] * 4) / 12f; // Step up through four volume levels.
+            float targetValue = WorldStatus.TimeSinceGameEnd > 0f ? 0f : Mathf.Floor(PlayerStatus.StatValues[layer.Stat] * 4) / 12f; // Step up through four volume levels.
             layer.ValueCurrent = Mathf.SmoothDamp(layer.ValueCurrent, targetValue, ref layer.ValueVelocity, DampingTime);
             layer.Source.volume = layer.ValueCurrent;
             layer.LowPass.cutoffFrequency = LowPassHzByDayProgress.Evaluate(WorldStatus.GameTimeProgress);
