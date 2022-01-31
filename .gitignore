@@ -66,3 +66,11 @@ UserSettings/EditorUserSettings.asset
 UserSettings/Layouts/CurrentMaximizeLayout.dwlt
 UserSettings/Layouts/default-2021.dwlt
 Packages/packages-lock.json
+TalkWithFists 0.1/
+TalkWithFists 0.1.7z
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/AOTGenerationConfig.asset
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/AOTGenerationConfig.asset.meta
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/ImportSettingsConfig.asset
+Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/ImportSettingsConfig.asset.meta
+ProjectSettings/BurstAotSettings_StandaloneWindows.json
+ProjectSettings/CommonBurstAotSettings.json
