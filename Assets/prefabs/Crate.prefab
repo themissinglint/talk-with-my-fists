@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 264713800708874485}
   - component: {fileID: 9046426423008786941}
   - component: {fileID: 1670163531}
+  - component: {fileID: 5220618325575630377}
   m_Layer: 18
   m_Name: Crate
   m_TagString: Untagged
@@ -215,3 +216,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5220618325575630377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4145648756267213363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29eb2321fb25bc4992df5e5051e70a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 2
+  loot: {fileID: 3533502083710759679, guid: c75525814cd4fc14aba15a17e9fcebd5, type: 3}
+  explodeImpulse: 10
