@@ -38,7 +38,7 @@ public class Tree : MonoBehaviour
 			rb.AddForce(new Vector2(Random.Range(-explodeImpulse, explodeImpulse), Random.Range(-explodeImpulse, explodeImpulse)), ForceMode2D.Impulse);
 			rb.AddTorque(Random.Range(-1f, 1f));
 		}
-		Destroy(gameObject);
+		Destroy(this);
 	}
 
 

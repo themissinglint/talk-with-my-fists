@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub_Earth Dupe Plus Lane Scene.unity
     guid: 138001e63023f4641ab8a24a736c9d72
+  - enabled: 1
+    path: Assets/Scenes/Good Ending Scene.unity
+    guid: 9435cca1a6f479a45989aa2de8fc3420
   m_configObjects: {}
